@@ -1,0 +1,78 @@
+.logo{
+
+    height: 150px; 
+    text-align: center;
+}
+
+.logo2{
+	
+	text-align:center;
+	height:37.5px;
+}
+
+.who{
+
+    height: 50px;
+    background-color: rgb(210, 210, 210);
+    text-align: center;
+}
+
+.but1{
+
+    height: 50px;
+	background-color: rgb(200, 200, 200);
+    text-align: center;
+}
+
+.login {
+	
+    height: 75px;
+    background-color: rgb(190,190,190);
+}
+
+.login2 {
+	
+	height:37.5px;
+}
+	
+.login3 {
+	
+    height: 75px;
+}
+
+.nav{
+	height:50px;
+	background-color: rgb(200,200,200);
+
+}
+
+.lightgrey{
+	
+	background-color: rgb(230, 230, 230);
+}
+
+.poscenter{
+	
+	text-align:center;
+}
+
+.mapheight{
+	
+	height:350px;	
+}
+
+.mapcolor{
+
+	background-color:#97FF9D;	
+}
+
+.calheight{
+
+	height:200px;	
+	background-color:#F9D1D2;
+}
+
+.hauto{
+
+	height:auto;	
+}
