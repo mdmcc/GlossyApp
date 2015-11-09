@@ -1,6 +1,6 @@
 .logo{
 
-    height: 150px; 
+  /*  height: 150px; */
     text-align: center;
 }
 
@@ -11,23 +11,42 @@
 }
 
 .who{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.alreadyUser{
+
+   /* height: 40px;*/
+    background-color: #D5CFE1;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.topbut{
 
     height: 50px;
-    background-color: rgb(210, 210, 210);
+	/*background-color: rgb(200, 200, 200);*/
     text-align: center;
+    margin-top: 15px;
 }
 
 .but1{
 
     height: 50px;
-	background-color: rgb(200, 200, 200);
+	/*background-color: rgb(200, 200, 200);*/
     text-align: center;
 }
 
 .login {
 	
-    height: 75px;
-    background-color: rgb(190,190,190);
+    height: 74px;
+    background-color: rgb(255, 255, 255);
+}
+
+.servicesBox {
+	height: 35px;
 }
 
 .login2 {
@@ -37,7 +56,7 @@
 	
 .login3 {
 	
-    height: 75px;
+    height: 45px;
 }
 
 .nav{

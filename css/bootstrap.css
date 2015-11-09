@@ -9,8 +9,10 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   /*sized for iPhone 5*/
-  max-height: 1136px;
-  max-width: 640px;
+  /*max-height: 1136px;
+  max-width: 640px;*/
+
+  /* To make max-height and width smaller, adjust lines 1638 onward */
 }
 body {
   margin: 0;
@@ -25,16 +27,16 @@ body {
 
 #profilehead {
   background-color: #D5CFE1;
-  font-size: 20pt;
-  margin-top: 2%;
-  margin-bottom: -5.5%;
+  font-size: 15pt;
+  /*margin-top: 2%;*/
+  /*margin-bottom: 40px;*/
 }
 
 #profilesubhead {
   background-color: #D5CFE1;
   font-size: 14pt;
-  margin-top: 2%;
-  margin-bottom: -1%;
+  /*margin-top: 2%;*/
+  margin-bottom: 15px;
 }
 
 #buttonimg {
@@ -44,10 +46,8 @@ body {
 }
 
 #fblog {
-  width: 225px;
-  height: auto;
+  width: 245px;
   margin: auto;
-  margin-top: -3%;
 }
 
 #footerbut {
@@ -1635,7 +1635,7 @@ pre code {
   margin-left: auto;
   background-color: #D5CFE1;
 }
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
   .container {
     width: 750px;
   }
@@ -1650,12 +1650,13 @@ pre code {
     width: 1170px;
   }
 }
+
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}*/
+}
 .row {
   margin-right: 4%;
   margin-left: 4%;
