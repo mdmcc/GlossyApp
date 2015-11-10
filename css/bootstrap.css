@@ -19,41 +19,6 @@ body {
   background-color: #D5CFE1;
 }
 
-#logo {
-  height: 150px;
-  width: 150px;
-  margin-top: 1%;
-}
-
-#profilehead {
-  background-color: #D5CFE1;
-  font-size: 15pt;
-  /*margin-top: 2%;*/
-  /*margin-bottom: 40px;*/
-}
-
-#profilesubhead {
-  background-color: #D5CFE1;
-  font-size: 14pt;
-  /*margin-top: 2%;*/
-  margin-bottom: 15px;
-}
-
-#buttonimg {
-  width: 100%;
-  height: auto;
-  padding-left: 20%;
-}
-
-#fblog {
-  width: 245px;
-  margin: auto;
-}
-
-#footerbut {
-  margin-top: 1%;
-}
-
 article,
 aside,
 details,
