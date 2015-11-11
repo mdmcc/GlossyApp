@@ -89,6 +89,10 @@
 
 .servicesBox {
 	height: 35px;
+  width: 50%;
+  font-size: 12pt;
+  margin-left: -10%;
+  margin-top: 7%;
 }
 
 .login2 {
@@ -113,8 +117,10 @@
 }
 	
 .login3 {
-	
-    height: 45px;
+	width: 70%;
+  height: 45px;
+  margin-left: -12%;
+  margin-top: 3%;
 }
 
 .logbut {
