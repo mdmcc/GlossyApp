@@ -44,10 +44,25 @@
   margin-bottom: 15px;
 }
 
-#buttonimg {
-  width: 100%;
-  height: auto;
-  padding-left: 20%;
+#buttonimg1 {
+  width: auto;
+  height: 100%;
+
+}
+
+#buttonimg2 {
+  width: auto;
+  height: 75%;
+}
+
+#buttonimg3 {
+  width: auto;
+  height: 70%;
+}
+
+#buttonimg4 {
+  width: auto;
+  height: 85%;
 }
 
 .topbut{
@@ -97,7 +112,21 @@
 }
 
 #footerbut {
+  height: 75px;
+  width: 24%;
   margin-top: 1%;
+  margin-right: 0%;
+  margin-left: 0%;
+  padding-bottom: 0%;
+  padding-right: 0%;
+  padding-left: 0%;
+  padding-top: 2%;
+}
+
+.footrow {
+  background-color: #D5CFE1;
+  margin: -2%;
+  padding: 0%;
 }
 
 .lightgrey{
