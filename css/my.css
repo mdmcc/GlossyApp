@@ -82,9 +82,9 @@
 }
 
 .login {
-	
-    height: 74px;
-    background-color: rgb(255, 255, 255);
+	width: 50%;
+  height: 74px;
+  /*background-color: rgb(255, 255, 255);*/
 }
 
 .servicesBox {
@@ -96,6 +96,13 @@
   font-size: 12pt;
   margin-left: -10%;
   margin-top: 7%;
+}
+
+.loginbox {
+  width: 71%;
+  height: 40px;
+  margin-left: 28%;
+  margin-top: 3%;
 }
 
 .loginbox2 {
@@ -110,15 +117,26 @@
     height: 45px;
 }
 
+.logbut {
+  margin: auto;
+  margin-top: 5%;
+}
+
 .nav{
 	height:50px;
 	background-color: rgb(200,200,200);
 
 }
 
+#oldPass {
+  font-size: 10pt;
+}
+
 #fblog {
   width: 245px;
   margin: auto;
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 
 #footerbut {
