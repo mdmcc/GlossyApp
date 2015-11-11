@@ -78,26 +78,54 @@
     height: 50px;
 	/*background-color: rgb(200, 200, 200);*/
     text-align: center;
+    margin-bottom: 3%;
 }
 
 .login {
-	
-    height: 74px;
-    background-color: rgb(255, 255, 255);
+	width: 50%;
+  height: 74px;
+  /*background-color: rgb(255, 255, 255);*/
 }
 
 .servicesBox {
 	height: 35px;
+  width: 50%;
+  font-size: 12pt;
+  margin-left: -10%;
+  margin-top: 7%;
 }
 
 .login2 {
-	
-	height:37.5px;
+	width: 50%;
+  font-size: 12pt;
+  margin-left: -10%;
+  margin-top: 7%;
+}
+
+.loginbox {
+  width: 71%;
+  height: 40px;
+  margin-left: 28%;
+  margin-top: 3%;
+}
+
+.loginbox2 {
+  width: 70%;
+  height: 40px;
+  margin-left: -12%;
+  margin-top: 3%;
 }
 	
 .login3 {
-	
-    height: 45px;
+	width: 70%;
+  height: 45px;
+  margin-left: -12%;
+  margin-top: 3%;
+}
+
+.logbut {
+  margin: auto;
+  margin-top: 5%;
 }
 
 .nav{
@@ -106,9 +134,15 @@
 
 }
 
+#oldPass {
+  font-size: 10pt;
+}
+
 #fblog {
   width: 245px;
   margin: auto;
+  margin-top: 5%;
+  margin-bottom: 3%;
 }
 
 #footerbut {
