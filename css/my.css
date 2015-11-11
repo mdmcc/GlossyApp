@@ -78,6 +78,7 @@
     height: 50px;
 	/*background-color: rgb(200, 200, 200);*/
     text-align: center;
+    margin-bottom: 3%;
 }
 
 .login {
@@ -91,8 +92,17 @@
 }
 
 .login2 {
-	
-	height:37.5px;
+	width: 50%;
+  font-size: 12pt;
+  margin-left: -10%;
+  margin-top: 7%;
+}
+
+.loginbox2 {
+  width: 70%;
+  height: 40px;
+  margin-left: -12%;
+  margin-top: 3%;
 }
 	
 .login3 {
