@@ -15,8 +15,7 @@
     
 </head>
 <body>
-<script src="https://maps.googleapis.com/maps/api/js?callback=loadMyMap"async defer></script>
-<script src="js/customerMap.js"></script>
+
     <div class="container">
     
         <div class="row" >
@@ -35,6 +34,7 @@
         	<hr>
         
         <div class="col-xs-12">
+            <input id="pac-input" class="controls" type="text" placeholder="Search Google Maps">
         	<div id="gogmap2" class="mapheight poscenter mapcolor">
             GOOGLE MAPS
             </div>
@@ -55,5 +55,10 @@
             
   
   </div>
+  <!--  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaeJTd_l2XG8d9QNJlomUmsr_TPMusS9c&libraries=places&callback=initAutocomplete"
+         async defer></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=loadMyMap&libraries=places"async defer></script>
+<script src="js/customerMap.js"></script>
+ 
 </body>
 </html>
