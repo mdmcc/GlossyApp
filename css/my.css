@@ -1,7 +1,16 @@
-#logo {
+@media (min-width: 0px){
+  #logo {
   height: 150px;
   width: 150px;
-  margin-top: 1%;
+  margin-top: 5%;
+}
+
+.indexlogo {
+  height: 250px;
+  width: 250px;
+  margin-top: 8%;
+  margin-bottom: -10%;
+  margin-left: auto;
 }
 
 .logo{
@@ -32,7 +41,7 @@
 
 #profilehead {
   background-color: #D5CFE1;
-  font-size: 13pt;
+  font-size: 18pt;
   /*margin-top: 2%;*/
   /*margin-bottom: 40px;*/
 }
@@ -128,6 +137,13 @@
   margin-top: 5%;
 }
 
+.typebut {
+  margin: auto;
+  margin-top: 3%;
+  height: 15vh;
+  font-size: 16pt;
+}
+
 .nav{
 	height:50px;
 	background-color: rgb(200,200,200);
@@ -194,7 +210,56 @@
 
 	height:auto;	
 }
+}
 
+@media (min-width: 700px) {
+
+  .indexlogo {
+  height: 450px;
+  width: 450px;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  margin-left: 16%;
+}
+
+  .typebut {
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  height: 15vh;
+  font-size: 24pt;
+}
+
+#profilehead {
+  font-size: 24pt;
+
+}
+
+}
+
+@media (min-width: 1020px) {
+
+  .indexlogo {
+  height: 350px;
+  width: 350px;
+  margin-top: 2%;
+  margin-left: 33%;
+}
+
+  #profilehead {
+  font-size: 20pt;
+  margin-top: -3%;
+}
+
+  .typebut {
+  margin: auto;
+  margin-top: 0%;
+  margin-bottom: 2%;
+  height: 10vh;
+  font-size: 20pt;
+}
+
+}
 /* the CSS for Customer google maps goes here */
 .controls {
   margin-top: 10px;
