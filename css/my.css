@@ -50,7 +50,7 @@
   background-color: #D5CFE1;
   font-size: 11pt;
   /*margin-top: 2%;*/
-  margin-bottom: 15px;
+  margin-bottom: -2%;
 }
 
 #buttonimg1 {
@@ -222,7 +222,13 @@
   margin-left: 16%;
 }
 
-  .typebut {
+ #logo {
+  height: 250px;
+  width: 250px;
+  margin-top: 5%;
+}
+
+.typebut {
   margin: auto;
   margin-top: 1%;
   margin-bottom: 2%;
@@ -232,7 +238,65 @@
 
 #profilehead {
   font-size: 24pt;
+}
 
+#profilesubhead {
+  font-size: 20pt;
+}
+
+.alreadyUser {
+  font-size: 20pt;
+}
+
+.login {
+  width: 50%;
+  height: 74px;
+  /*background-color: rgb(255, 255, 255);*/
+}
+
+.servicesBox {
+  height: 35px;
+  width: 50%;
+  font-size: 12pt;
+  margin-left: -10%;
+  margin-top: 7%;
+}
+
+.login2 {
+  width: 30%;
+  font-size: 20pt;
+  margin-top: 4%;
+  margin-left: -1%;
+  margin-right: 3%;
+}
+
+.loginbox {
+  width: 60%;
+  height: 60px;
+  margin-left: 36%;
+  margin-top: 3%;
+  font-size: 18pt;
+}
+
+.loginbox2 {
+  width: 60%;
+  height: 60px;
+  margin-left: 4%;
+  margin-top: 3%;
+  font-size: 18pt;
+}
+
+.logbut {
+  margin: auto;
+  margin-top: 5%;
+  font-size: 24pt;
+  height: 70px;
+  width: 75%;
+}
+
+.btn {
+  height: 70px;
+  font-size: 22pt;
 }
 
 }
@@ -242,21 +306,58 @@
   .indexlogo {
   height: 350px;
   width: 350px;
-  margin-top: 2%;
+  margin-top: 1%;
   margin-left: 33%;
 }
 
   #profilehead {
   font-size: 20pt;
-  margin-top: -3%;
+  margin-top: 1%;
+}
+
+#profilesubhead {
+  font-size: 20pt;
+  margin-bottom: 1%;
 }
 
   .typebut {
   margin: auto;
   margin-top: 0%;
   margin-bottom: 2%;
-  height: 10vh;
+  height: 60px;
   font-size: 20pt;
+}
+
+.login2 {
+  width: 30%;
+  font-size: 20pt;
+  margin-top: 4%;
+  margin-left: 5%;
+
+}
+
+.loginbox {
+  width: 60%;
+  height: 60px;
+  margin-left: 36%;
+  margin-top: 3%;
+  font-size: 18pt;
+}
+
+.loginbox2 {
+  width: 60%;
+  height: 60px;
+  margin-left: -2%;
+  margin-top: 3%;
+  font-size: 18pt;
+}
+
+.logbut {
+  margin: auto;
+  margin-top: 5%;
+  font-size: 24pt;
+  height: 70px;
+  width: 75%;
 }
 
 }
