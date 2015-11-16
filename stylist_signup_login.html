@@ -12,12 +12,26 @@
 
     <script src="js/bootstrap.js" ></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/customerFB_api.js" ></script>
    
+    <style>
+        .fb-login-button{
+            left: 45%;
+        }
+    </style>
 </head>
 <body>
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div class="container">
-    
         <div class="row">
         <div class="col-xs-12 logo" >
                <img src = "./assets/logo_16colour.gif" alt = "logo" id = "logo"/>
@@ -85,16 +99,18 @@
         </div>
         
          <div class="row logbut">
-          <a href="stylist_signup_services.html"> 
-            <button type="submit" class="col-xs-12 btn btn-success">Submit</button>
-          </a>
+            <a href="stylist_signup_services.html"> 
+              <button type="submit" class="col-xs-12 btn btn-success">Submit</button>
+            </a>
           </div>
           
           <div class="row">
-          <div class="row" id = "fblog">
-           <img alt="facebook_login" class="col-xs-12" src="http://www.filmisite.com/social_login/images/signin-facebook-large.png" />
-           </div>
+            <div class="row" id = "fblog">
+             <!-- <img alt="facebook_login" class="col-xs-12" src="http://www.filmisite.com/social_login/images/signin-facebook-large.png" /> -->
+            </div>
           </div>
+
+          <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
    </div>    
     
 </body>

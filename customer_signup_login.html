@@ -24,28 +24,29 @@
 
 </head>
 <body>
-   <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
+   
+<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+  		var js, fjs = d.getElementsByTagName(s)[0];
+  		if (d.getElementById(id)) return;
+  		js = d.createElement(s); js.id = id;
+  		js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
     <div class="container">
     
         <div class="row" >
-        <div class="col-xs-12 logo" >
+        	<div class="col-xs-12 logo" >
                <img src = "./assets/logo_16colour.gif" alt = "logo" id = "logo"/>
             </div>
     	</div>
     
     
     	<div class="row">
-         <div class="col-xs-12 who" id = "profilehead">
+         	<div class="col-xs-12 who" id = "profilehead">
                Customer
-         </div>
+        	</div>
       </div>
 
       <div class="row">
@@ -107,15 +108,13 @@
           </div>
 
           <div class="row">
-          <div class="row" id = "fblog">
+          	<div class="row" id = "fblog">
        <!-- <img id="fblogin" alt="facebook_login" class="col-xs-12" src="http://www.filmisite.com/social_login/images/signin-facebook-large.png" /> -->
-           </div>
+            </div>
           </div>
-  <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
+ 			 <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
           
-          <!-- <div class="row">
-            <button type="button" class="col-xs-12 btn btn-primary btn-xs">Forgot password?</button>
-          </div> -->
+ 
     </div>   
         
 </body>
