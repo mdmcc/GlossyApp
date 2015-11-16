@@ -56,7 +56,6 @@
 #buttonimg1 {
   width: auto;
   height: 100%;
-
 }
 
 #buttonimg2 {
@@ -132,9 +131,28 @@
   margin-top: 3%;
 }
 
+.login4 {
+  height: 50px;
+  width: 45%;
+  font-size: 11pt;
+  margin-left: -8%;
+  margin-right: 10%;
+}
+
+.loginbox3 {
+  width: 62%;
+  height: 40px;
+  margin-left: -12%;
+
+}
+
 .logbut {
   margin: auto;
-  margin-top: 5%;
+  margin-top: 2%;
+}
+
+.btn {
+  margin-bottom: 2%;
 }
 
 .typebut {
@@ -150,8 +168,9 @@
 
 }
 
-#oldPass {
-  font-size: 10pt;
+.cal {
+  margin: auto;
+  display: block;
 }
 
 #fblog {
@@ -164,9 +183,10 @@
 #footerbut {
   height: 75px;
   width: 24%;
-  margin-top: 1%;
+  margin-top: 3%;
   margin-right: 0%;
   margin-left: 0%;
+  margin-bottom: -2%;
   padding-bottom: 0%;
   padding-right: 0%;
   padding-left: 0%;
@@ -255,11 +275,25 @@
 }
 
 .servicesBox {
-  height: 35px;
+  height: 50px;
+  width: 30%;
+  font-size: 20pt;
+  margin-left: 0%;
+  margin-top: 4%;
+}
+
+.cal {
   width: 50%;
-  font-size: 12pt;
-  margin-left: -10%;
-  margin-top: 7%;
+  height: 50px;
+  font-size: 20pt;
+}
+
+.login3 {
+  width: 65%;
+  height: 55px;
+  margin-left: 1%;
+  margin-top: 3%;
+  font-size: 18pt;
 }
 
 .login2 {
@@ -286,6 +320,23 @@
   font-size: 18pt;
 }
 
+.login4 {
+  height: 60px;
+  width: 40%;
+  font-size: 20pt;
+  margin-left: 4%;
+  margin-right: 0%;
+  margin-top: 5%;
+}
+
+.loginbox3 {
+  width: 55%;
+  height: 60px;
+  margin-left: 0%;
+  margin-top: 4%;
+  font-size: 18pt;
+}
+
 .logbut {
   margin: auto;
   margin-top: 5%;
@@ -297,17 +348,58 @@
 .btn {
   height: 70px;
   font-size: 22pt;
+  margin-bottom: 1%;
 }
 
 }
 
 @media (min-width: 1020px) {
 
-  .indexlogo {
+ #logo {
+  height: 250px;
+  width: 250px;
+  margin-top: 1%;
+}
+
+.indexlogo {
   height: 350px;
   width: 350px;
   margin-top: 1%;
   margin-left: 33%;
+}
+
+#buttonimg1 {
+  width: auto;
+  height: 110%;
+
+}
+
+#buttonimg2 {
+  width: auto;
+  height: 100%;
+}
+
+#buttonimg3 {
+  width: auto;
+  height: 100%;
+}
+
+#buttonimg4 {
+  width: auto;
+  height: 100%;
+}
+
+#footerbut {
+  height: 75px;
+  width: 24%;
+  margin-top: 3%;
+  margin-right: 0%;
+  margin-left: 0%;
+  margin-bottom: -2%;
+  padding-bottom: 5px;
+  padding-right: 0%;
+  padding-left: 0%;
+  padding-top: 8px;
 }
 
   #profilehead {
@@ -350,6 +442,23 @@
   margin-left: -2%;
   margin-top: 3%;
   font-size: 18pt;
+}
+
+.login4 {
+  height: 60px;
+  width: 40%;
+  font-size: 16pt;
+  margin-left: 8%;
+  margin-right: 0%;
+  margin-top: 3%;
+}
+
+.loginbox3 {
+  width: 55%;
+  height: 60px;
+  margin-left: -10%;
+  margin-top: 2%;
+  font-size: 14pt;
 }
 
 .logbut {
