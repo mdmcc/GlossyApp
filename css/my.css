@@ -25,6 +25,12 @@
 	height:37.5px;
 }
 
+#logo3 {
+  height: 150px;
+  width: 150px;
+  margin-top: -13%;
+}
+
 .who{
     text-align: center;
     padding-top: 15px;
@@ -173,6 +179,14 @@
   display: block;
 }
 
+#calendar {
+  width: 110%;
+  margin: 0 auto;
+  margin-left: -5%;
+  background-color: white;
+  font-size: 8pt;
+}
+
 #fblog {
   width: 245px;
   margin: auto;
@@ -196,6 +210,7 @@
 .footrow {
   background-color: #D5CFE1;
   margin: -2%;
+  margin-top: 0%;
   padding: 0%;
 }
 
@@ -248,6 +263,12 @@
   margin-top: 5%;
 }
 
+#logo3 {
+  height: 250px;
+  width: 250px;
+  margin-top: -3%;
+}
+
 .typebut {
   margin: auto;
   margin-top: 1%;
@@ -262,6 +283,14 @@
 
 #profilesubhead {
   font-size: 20pt;
+}
+
+.footrow {
+  background-color: #D5CFE1;
+  margin-right: -2%;
+  margin-left: 0%;
+  margin-top: 0%;
+  padding: 0%;
 }
 
 .alreadyUser {
@@ -286,6 +315,13 @@
   width: 50%;
   height: 50px;
   font-size: 20pt;
+}
+
+#calendar {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  font-size: 14pt;
 }
 
 .login3 {
@@ -361,6 +397,12 @@
   margin-top: 1%;
 }
 
+#logo3 {
+  height: 250px;
+  width: 250px;
+  margin-top: -3%;
+}
+
 .indexlogo {
   height: 350px;
   width: 350px;
@@ -400,6 +442,14 @@
   padding-right: 0%;
   padding-left: 0%;
   padding-top: 8px;
+}
+
+.footrow {
+  background-color: #D5CFE1;
+  margin-right: -2%;
+  margin-left: 0%;
+  margin-top: 0%;
+  padding: 0%;
 }
 
   #profilehead {
