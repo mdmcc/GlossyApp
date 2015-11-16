@@ -86,8 +86,8 @@
           <hr>
   
     <div class="col-xs-12">
-            <input id="pac-input" class="controls" type="text" placeholder="Search Google Maps">
-          <div id="gogmap2" class="mapheight poscenter mapcolor">
+            <input id="pacinput" class="controls" type="text" placeholder="Search Google Maps">
+          <div id="gogmap2" class="mapheight poscenter mapcolor"> 
             GOOGLE MAPS
             </div>
      </div>
@@ -95,9 +95,7 @@
        <hr>
         
          <div class="row logbut">
-          <a href="customer_appointment_booking.html"> 
-          <button type="submit" id="customerSubmit" class="col-xs-12 btn btn-success">Next</button>
-          </a>
+          <button type="button" id="customerSubmit" class="col-xs-12 btn btn-success">Next</button>
         </div>
         
         <div class="row logbut">
@@ -115,13 +113,32 @@
                   timePicker: true,
                   timePickerIncrement: 15,
                   locale: {
-                      format: 'MM/DD/YYYY h:mm A'
+                      format: 'YYYY-MM-DD hh:mm:00'
                   }
               }, 
               function(start, end, label) {
                   var years = moment().diff(start, 'years'); // need a different function
                   // alert("You are " + years + " years old.");
               });
+              $("#customerSubmit").click(function() {
+                $.ajax({
+                  url:"php/customerSubmit.php",
+                  dataType:"json",
+                  type:"POST",
+                  data:{
+                    customer_id:1,
+                    service_id:1,
+                    customer_dateTime: $('input[name="appointment"]').val(),
+                    customer_price:"30to50",
+                    customer_lat: 78,
+                    customer_lng: 223,
+
+                  },
+                  success: function(resp){
+
+                  }
+                });
+            });
           });
       </script>
 </body>

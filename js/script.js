@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-            $("#customerSubmit").click(function() {
+            /*$("#customerSubmit").click(function() {
                 //console.log($("#lastName").val());
                 var formData = ConvertFormToJSON("#customerForm");
                 console.log("Customer data to send: ", formData);
@@ -30,7 +30,7 @@ $(document).ready(function () {
                         //console.log(jqXHR.statusText, textStatus, errorThrown);
                         console.log(jqXHR.statusText, textStatus);
                     }
-                });
+                });*/
 
                 // from: http://www.developerdrive.com/2013/04/turning-a-form-element-into-json-and-submiting-it-via-jquery/
                 function ConvertFormToJSON(form){

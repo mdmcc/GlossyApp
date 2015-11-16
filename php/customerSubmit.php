@@ -1,5 +1,19 @@
 <?php
 
+    //var_dump($_POST);
+    $con = mysqli_connect("localhost", "root", "root", "glossy");
+    //var_dump($_POST["customer_dateTime"]);
+    //$_POST["customer_dateTime"] = date($_POST["customer_dateTime"]);
+
+    $sql = "insert into appointment (service_id, customer_id, customer_price, customer_dateTime, customer_lng, customer_lat, appointment_status) values ('".$_POST["service_id"]."', '".$_POST["customer_id"]."', '".$_POST["customer_price"]."', '".$_POST["customer_dateTime"]."', '".$_POST["customer_lng"]."', '".$_POST["customer_lat"]."', '0')";
+    $results = mysqli_query ($con, $sql);
+    if($results){
+
+        echo json_encode("success");
+    };
+
+    exit;
+
     if (session_status() == PHP_SESSION_NONE) {
         session_start();
     }
@@ -23,11 +37,11 @@
             && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
             // yes, is AJAX call
             // answer POST call and get the data that was sent
-            if(isset($_POST["cut"]) && !empty($_POST["cut"])
-                && isset($_POST["color"]) && !empty($_POST["color"])
-                && isset($_POST["blowOut"]) && !empty($_POST["blowOut"])
+            if(isset($_POST["cut"]) 
+                && isset($_POST["color"]) 
+                && isset($_POST["blowOut"]) 
                 && isset($_POST["appointment"]) && !empty($_POST["appointment"])
-                && isset($_POST["pac-input"]) && !empty($_POST["pac-input"])){
+                && isset($_POST["pacinput"]) && !empty($_POST["pacinput"])){
 
 
                 // get the data from the post and store in variables
@@ -35,26 +49,33 @@
                 $color = $_POST["color"];
                 $blowOut = $_POST["blowOut"];
                 $appointment = $_POST["appointment"];
-                $googlemap = $_POST["pac-input"];
+                $googlemap = $_POST["pacinput"];
+
+
+                $sql = "";
+
+                if(!empty($cut) && !empty($blowOut) && !empty($color)) {
+                    $sql = "insert into appointment (service_id, customer_id, customer_price, customer_dateTime, customer_lng, customer_lat, appointment_status) values ('".$_POST["service_id"]."', '".$_POST["customer_id"]."', '".$_POST["customer_price"]."', '".$_POST["customer_dateTime"]."', '".$_POST["customer_lng"]."', '".$_POST["customer_lat"]."', '0')";
+                } 
 
 
                 // HERE'S WHERE YOU'D GET THE VALUES FROM THE DB
-                if($cut== "30to50" && $color == "40to60" && $blowOut == "30to50" && $appointment == "" && $googlemap == "") {
+                //if($cut== "30to50" && $color == "40to60" && $blowOut == "30to50") {
                     // success
-                    $_SESSION['cut'] = $cut;
+                    /*$_SESSION['cut'] = $cut;
                     $_SESSION['color'] = $color;
                     $_SESSION['blowOut'] = $blowOut;
                     $_SESSION['appointment'] = "";
                     $_SESSION['googlemap'] = "";
-                    $_SESSION['scheduled'] = true;
+                    $_SESSION['scheduled'] = true;*/
 
-                    $sid= session_id();
-                    $data = array("status" => "success", "sid" => $sid);
+                    //$sid= session_id();
+//                    $data = array("status" => "success");
 
 
-                } else {
-                    $data = array("status" => "fail", "msg" => "Services and/or appointment and/or location not correct.");
-                }
+  //              } else {
+  //                  $data = array("status" => "fail", "msg" => "Services and/or appointment and/or location not correct.");
+  //              }
 /*
                 $data = array("msg" => "Thank you $firstName $lastName, you've been added to our mailing list!",
                     "firstName" => "$firstName", "lastName" => "$lastName",
