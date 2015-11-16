@@ -1,27 +1,50 @@
 $(document).ready(function () {
 
-    $("#button").click(function () {
-        
-    });
 
-    $("#button").hover(function () {
-        $(this).stop().css({
-           "cursor": "pointer"
-        });
-    });
+            $("#customerSubmit").click(function() {
+                //console.log($("#lastName").val());
+                var formData = ConvertFormToJSON("#customerForm");
+                console.log("Customer data to send: ", formData);
 
-    $("#signup_button").click(function(){
+                $.ajax({
+                    url: "customerSubmit.php",
+                    type: "POST",
+                    dataType: "JSON",
+                    data: formData,
+                    success: function(data) {
+                        console.log("Login data returned: ", data);
 
+                        var status = data['status'];
+                        // if(status == 'fail') {
+                        //     $("#errorMsg").html(data['msg']);
+                        //     $("#errorMsg").css("display", "block");
+                        // } else {
+                        //     // get user data
+                        //     getUserProfileInfo();
+                        //     $('#customerForm').trigger("reset");
 
-    });
+                        // }
 
-    function validateFormCustomerSignUp(){
-        var x = document.forms['customerSignUpForm']['customer_firstName'].value;
-        if(x == null || x == ""){
-            alert("First name must be filled out");
-            return false;
-        }
-    }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        //console.log(jqXHR.statusText, textStatus, errorThrown);
+                        console.log(jqXHR.statusText, textStatus);
+                    }
+                });
+
+                // from: http://www.developerdrive.com/2013/04/turning-a-form-element-into-json-and-submiting-it-via-jquery/
+                function ConvertFormToJSON(form){
+                    var array = $(form).serializeArray();
+                    var json = {};
+
+                    jQuery.each(array, function() {
+                        // don't send 'undefined'
+                        json[this.name] = this.value || '';
+                    });
+                    return json;
+                }
+
+            });
 
 
 });
