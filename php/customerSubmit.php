@@ -1,7 +1,8 @@
 <?php
 
     //var_dump($_POST);
-    $con = mysqli_connect("localhost", "root", "root", "glossy");
+    $con = mysqli_connect("localhost”, “kmcin”, “GlossyApp2”);
+
     //var_dump($_POST["customer_dateTime"]);
     //$_POST["customer_dateTime"] = date($_POST["customer_dateTime"]);
 
