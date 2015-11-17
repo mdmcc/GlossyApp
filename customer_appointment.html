@@ -118,8 +118,8 @@
               }, 
               function(start, end, label) {
                   var years = moment().diff(start, 'years'); // need a different function
-                  // alert("You are " + years + " years old.");
               });
+
               $("#customerSubmit").click(function() {
                 $.ajax({
                   url:"php/customerSubmit.php",
@@ -129,13 +129,13 @@
                     customer_id:1,
                     service_id:1,
                     customer_dateTime: $('input[name="appointment"]').val(),
-                    customer_price:"30to50",
+                    customer_price:$('select[name="cut"]').val(),
                     customer_lat: 78,
                     customer_lng: 223,
 
                   },
                   success: function(resp){
-
+                    document.location.href="customer_calendar.html"; // works only on success; need an error message
                   }
                 });
             });

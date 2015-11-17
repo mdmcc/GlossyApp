@@ -6,7 +6,7 @@
       version    : 'v2.5'
     });
    
-      var loginBut = document.getElementById("fb-login-button"); // turn into JQuery; converttoformdata in ajax login session.html
+      var loginBut = document.getElementById("fb-login-button"); 
       FB.getLoginStatus(function(response1){
           console.log(response1);
           if(response1.status == "connected"){
