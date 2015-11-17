@@ -1,9 +1,10 @@
 <?php
 
     //var_dump($_POST);
-    $connect = mysql_connect("localhost", "root", "root", "glossy");
+    $connect = mysql_connect(“localhost”, “kmcin”, “GlossyApp2”); 
     if (!connect) { die('Connection Failed: ' . mysql_error()); { mysql_select_db(“glossy”, $connect);
     include("sessions.php");
+    // include("sessions.php");
     //var_dump($_POST["customer_dateTime"]);
     //$_POST["customer_dateTime"] = date($_POST["customer_dateTime"]);
 
