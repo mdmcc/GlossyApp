@@ -4,7 +4,7 @@
     <meta charset="UTF-B">
     <title>Stylist Signup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
+     
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/my.css"/>
 
@@ -15,21 +15,14 @@
     <script src="js/customerFB_api.js" ></script>
    
     <style>
-        .fb-login-button{
-            left: 45%;
+        #fbLoginBut{
+           margin-left: 29%;
         }
     </style>
 </head>
 <body>
   <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+  
 
     <div class="container">
         <div class="row">
@@ -80,7 +73,7 @@
     
                   
       <div class="row logbut">
-        <a href="stylist_calendar.html">
+        <a href="stylist_signup_services.html">
           <button type="button" id = "next" class="col-xs-12 btn btn-success">Next</button>
         </a>
       </div>
@@ -99,7 +92,7 @@
         </div>
         
          <div class="row logbut">
-            <a href="stylist_calendar.html"> 
+            <a href="stylist_signup_services.html"> 
               <button type="submit" class="col-xs-12 btn btn-success">Submit</button>
             </a>
           </div>
@@ -110,7 +103,7 @@
             </div>
           </div>
 
-          <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
+           <button id="fbLoginBut" type="submit">Login via Facebook</button>
    </div>    
     
 </body>
