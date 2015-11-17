@@ -42,8 +42,6 @@ $(document).ready(function () {
                         json[this.name] = this.value || '';
                     });
                     return json;
-                }
-
             });
 
 
