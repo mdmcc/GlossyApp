@@ -44,35 +44,35 @@
          </div>
       </div>
          
-<form name="stylist_signup" method='post' action='signup_stylist.php'>
+<form name="stylist_signup" method='post' action='./php/signup_stylist.php'>
     <fieldset>
          <hr>
         <div class="row">
           <div class="col-xs-4 login2">First name:</div>
-           <input class="col-xs-8 loginbox2" type="text" id="firstname" placeholder="First name">
+           <input class="col-xs-8 loginbox2" type="text" name="firstname" placeholder="First name">
         </div>
         
         <div class="row">
           <div class="col-xs-4 login2">Last name:</div>
-           <input class="col-xs-8 loginbox2" type="text" id="lastname" placeholder="Last name">
+           <input class="col-xs-8 loginbox2" type="text" name="lastname" placeholder="Last name">
         </div>
         
         <div class="row">
           <div class="col-xs-4 login2">Email:</div>
-           <input class="col-xs-8 loginbox2" type="text" id="email" placeholder="Email">
+           <input class="col-xs-8 loginbox2" type="text" name="email" placeholder="Email">
         </div>
         
         <div class="row">
           <div class="col-xs-4 login2">Password:</div>
-           <input class="col-xs-8 loginbox2" type="password" id="password" placeholder="Password">
+           <input class="col-xs-8 loginbox2" type="password" name="password" placeholder="Password">
         </div>
         
         <div class="row">
           <div class="col-xs-4 login2">Confirm:</div>
-           <input class="col-xs-8 loginbox2" type="password" id="confirmPassword" placeholder="Confirm password">
+           <input class="col-xs-8 loginbox2" type="password" name="confirmPassword" placeholder="Confirm password">
         </div>
     </fieldset>
-        </form>
+        </foarm>
                   
       <div class="row logbut">
         <a href="stylist_signup_services.html">
@@ -86,11 +86,12 @@
               Already a user?
             </div>
         </div>
-        
+        <form name="stylist_login" method='post' action='./php/login_stylist.php'>
+            <fieldset>
         <div class="row">
             <div class="col-xs-3 login2">Log in:</div>
-           <input class="col-xs-9 loginbox2" type="text" id="email" placeholder="Email"/> 
-           <input class="col-xs-9 loginbox" type="text" id="password" placeholder="Password"/> 
+           <input class="col-xs-9 loginbox2" type="text" name="email" placeholder="Email"/> 
+           <input class="col-xs-9 loginbox" type="text" name="password" placeholder="Password"/> 
         </div>
         
          <div class="row logbut">
@@ -98,7 +99,8 @@
               <button type="submit" class="col-xs-12 btn btn-success">Submit</button>
             </a>
           </div>
-          
+            </fieldset>
+        </form>
           <div class="row">
             <div class="row" id = "fblog">
              <!-- <img alt="facebook_login" class="col-xs-12" src="http://www.filmisite.com/social_login/images/signin-facebook-large.png" /> -->
