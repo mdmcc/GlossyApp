@@ -6,7 +6,7 @@ $(document).ready(function(){
             console.log(event);
         }
    });
-        console.log(event);
+        //console.log(event);
                 function loadMyMap(){
                     console.log(google);
                     var map = new google.maps.Map(
