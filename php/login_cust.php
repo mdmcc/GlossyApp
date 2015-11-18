@@ -1,6 +1,5 @@
 <?php
-$connect = mysql_connect(“localhost”, “kmcin”, “GlossyApp2”); 
-if (!connect) { die('Connection Failed: ' . mysql_error()); { mysql_select_db(“glossy”, $connect);
+include 'connection.php';
 include("sessions.php");
 
 $username = "guest";

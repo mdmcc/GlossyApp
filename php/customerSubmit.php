@@ -1,7 +1,7 @@
 <?php
 
     //var_dump($_POST);
-    $connect = mysql_connect(“localhost”, “kmcin”, “GlossyApp2”); 
+    $connect = mysql_connect(“localhost”, “glossyadmin1”, “glossy”); 
     if (!connect) { die('Connection Failed: ' . mysql_error()); { mysql_select_db(“glossy”, $connect);
     include("sessions.php");
     // include("sessions.php");
