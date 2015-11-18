@@ -9,4 +9,5 @@ if (!mysql_query($user_info)) { die('Error: ' . mysql_error()); };
 
 echo "Your information was added to the database.";
 mysql_close($connect); 
+echo "<script> window.location.href = '../customer_appointment.html'</script>"
 ?>                                                         

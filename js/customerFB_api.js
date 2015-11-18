@@ -22,6 +22,9 @@
                   
                 var inLname = document.getElementById("lastname");
                     inLname.value = info[0].last_name;
+                  
+                var Email = document.getElementById("email");
+                    Email.value = info[0].email;
               })
           }
       })
