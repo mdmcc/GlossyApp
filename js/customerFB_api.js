@@ -10,7 +10,7 @@
       FB.getLoginStatus(function(response1){
           console.log(response1);
           if(response1.status == "connected"){
-              FB.api('/me?fields=first_name,last_name,gender,about,age_range', function(response2){
+              FB.api('/me?fields=first_name,last_name,gender,about,age_range,email', function(response2){
         
                   console.log(response2);
                     info.push(response2);
