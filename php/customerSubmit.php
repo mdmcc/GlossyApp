@@ -4,8 +4,8 @@
     
     $connect = mysql_connect("localhost", "glossyadmin1", "glossy"); 
     
-    if (!$connect) { die('Connection Failed: ' . mysql_error()); }
-    mysql_select_db(“glossy”, $connect);
+    if (!$connected) { die('Connection Failed: ' . mysql_error()); }
+    mysql_select_db("glossy", $connect);
 
     // include("sessions.php");
     //var_dump($_POST["customer_dateTime"]);
