@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include("connection.php");
 
 mysql_select_db("glossy", $connect);
 

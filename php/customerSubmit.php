@@ -6,6 +6,7 @@
     
     if (!$connected) { die('Connection Failed: ' . mysql_error()); }
     mysql_select_db("glossy", $connect);
+    include("connection.php");
 
     // include("sessions.php");
     //var_dump($_POST["customer_dateTime"]);
