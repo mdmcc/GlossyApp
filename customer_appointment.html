@@ -115,30 +115,32 @@
                   locale: {
                       format: 'YYYY-MM-DD hh:mm:00'
                   }
-              }, 
-              function(start, end, label) {
-                  var years = moment().diff(start, 'years'); // need a different function
               });
 
               $("#customerSubmit").click(function() {
-                $.ajax({
-                  url:"php/customerSubmit.php",
-                  dataType:"json",
-                  type:"POST",
-                  data:{
-                    customer_id:1,
-                    service_id:1,
-                    customer_dateTime: $('input[name="appointment"]').val(),
-                    customer_price:"30to50",
-                    customer_lat: 78,
-                    customer_lng: 223,
+                  $.ajax({
+                      url:"php/customerSubmit.php",
+                      dataType:"json",
+                      type:"POST",
+                      data:{
+                        service_id:1,
+                        customer_id:1,
+                        customer_price:"30to50",
+                        customer_dateTime: $('input[name="appointment"]').val(),
+                        customer_lat: 78,
+                        customer_lng: 223,
 
-                  },
-                  success: function(resp){
-                    document.location.href="customer_calendar.html"; // works only on success; need an error message
-                  }
-                });
-            });
+                      },
+                      success: function(resp){
+                        document.location.href="customer_calendar.html"; // works only on success; need an error message
+                      },
+                      error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                          console.log("Status: " + textStatus); 
+                          console.log("Error: " + errorThrown);
+                          console.log(XMLHttpRequest); 
+                      }
+                  });
+              });
           });
       </script>
 </body>

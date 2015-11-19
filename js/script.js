@@ -1,15 +1,15 @@
-$(document).ready(function () {
-    function ConvertFormToJSON(form){
-                    var array = $(form).serializeArray();
-                    var json = {};
+// $(document).ready(function () {
+//     function ConvertFormToJSON(form){
+//                     var array = $(form).serializeArray();
+//                     var json = {};
 
-                    jQuery.each(array, function() {
-                        // don't send 'undefined'
-                        json[this.name] = this.value || '';
-                    });
-                    return json;
-            }
-        });
+//                     jQuery.each(array, function() {
+//                         // don't send 'undefined'
+//                         json[this.name] = this.value || '';
+//                     });
+//                     return json;
+//             }
+//         });
 
             /*$("#customerSubmit").click(function() {
                 //console.log($("#lastName").val());
