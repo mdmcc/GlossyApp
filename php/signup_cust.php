@@ -10,6 +10,6 @@ $result = mysqli_query($connect, $user_info);
 if($result)
 {echo "Your information was added to the database.";}
 else {
-	echo mysqli_error();
+	echo mysqli_connect_error();
 }
 ?>                                                       
