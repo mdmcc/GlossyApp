@@ -389,8 +389,8 @@
 .loginbox {
   width: 60%;
   height: 60px;
-  margin-left: 36%;
-  margin-top: 3%;
+  margin-left: 32%;
+  margin-top: -2%;
   font-size: 18pt;
 }
 
@@ -440,6 +440,12 @@
   width: 110vw;
   margin-left: -4%;
   padding-left: 2%;
+}
+
+.signin {
+  margin-top: 8%;
+  margin-left: 5%; 
+  font-size: 24pt;
 }
 
 .btn {
@@ -536,26 +542,28 @@
 
 .login2 {
   width: 30%;
-  font-size: 20pt;
-  margin-top: 4%;
+  font-size: 16pt;
+  margin-top: 1%;
+  margin-bottom: 1%;
   margin-left: 5%;
 
 }
 
 .loginbox {
   width: 60%;
-  height: 60px;
-  margin-left: 36%;
-  margin-top: 3%;
-  font-size: 18pt;
+  height: 25px;
+  margin-left: -3.5%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-size: 14pt;
 }
 
 .loginbox2 {
   width: 60%;
-  height: 60px;
+  height: 25px;
   margin-left: -2%;
-  margin-top: 3%;
-  font-size: 18pt;
+  margin-top: 1%;
+  font-size: 14pt;
 }
 
 .login4 {
@@ -578,24 +586,52 @@
 .signup {
   background-color: white;
   border-top: 1px grey solid;
-  width: 110vw;
-  margin-left: -4%;
+  width: 99.2vw;
+  margin-left: -6%;
   padding-left: 2%;
 }
 
 .signup2 {
   background-color: white;
-  width: 110vw;
-  margin-left: -4%;
+  width: 99.2vw;
+  margin-left: -6%;
   padding-left: 2%;
+}
+
+.signup3 {
+  background-color: white;
+  width: 99.2vw;
+  margin-left: -6%;
+  padding-left: 2%;
+}
+
+.signin {
+  width: 30%;
+  font-size: 16pt;
+  margin-top: 3%;
+  margin-left: 10%;
 }
     
 .logbut {
   margin: auto;
-  margin-top: 5%;
-  font-size: 24pt;
-  height: 70px;
-  width: 75%;
+  margin-top: 2%;
+  font-size: 14pt;
+  height: 40px;
+  width: 40%;
+  margin-bottom: 4%;
+}
+
+.fbLoginBut {
+  width: 35%;
+  display: block;
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 2%;
+}
+
+.fblogimg {
+  width: 100%;
 }
 
 }
