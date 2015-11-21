@@ -328,8 +328,10 @@
 }
 
 .hauto{
-
-	height:auto;	
+  width: 120%;
+	height:auto;
+  display: block;
+  margin-left: -10%;
 }
 }
 
@@ -517,6 +519,16 @@
   height: 70px;
   font-size: 22pt;
   margin-bottom: 1%;
+}
+
+.hauto{
+  width: 100%;
+  height:auto;
+  margin: auto;
+}
+
+pre {
+  font-size: 18pt;
 }
 
 }
@@ -719,6 +731,10 @@
 
 .fblogimg {
   width: 100%;
+}
+
+pre {
+  font-size: 11pt;
 }
 
 }
