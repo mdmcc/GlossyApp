@@ -1,0 +1,48 @@
+CREATE TABLE customer (
+  ID int NOT NULL AUTO_INCREMENT,
+  customer_email VARCHAR(50) NOT NULL,
+  customer_password VARCHAR(50) NOT NULL,
+  customer_confirmpass VARCHAR(50) NOT NULL,
+  customer_firstName VARCHAR(25) NOT NULL,
+  customer_lastName VARCHAR(30) NOT NULL,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE hairStylist (
+  ID int NOT NULL AUTO_INCREMENT,
+  hairStylist_email VARCHAR(50) NOT NULL,   
+  hairStylist_password VARCHAR(50) NOT NULL,
+  hairStylist_confirmpass VARCHAR(50) NOT NULL,
+  hairStylist_firstName VARCHAR(25) NOT NULL,
+  hairStylist_lastName VARCHAR(30) NOT NULL,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE appointment (
+  ID int NOT NULL AUTO_INCREMENT,
+  customer_id int(100) NOT NULL,
+  appointment_service_id int(100) NOT NULL,
+  customer_dateTime date NOT NULL,
+  customer_lng VARCHAR(50) NOT NULL,
+  customer_lat VARCHAR(50) NOT NULL,
+  hairStylist_id int(100), 
+  appointment_status int(100),
+  -- 0 = active, 1 = inactive, 2 = completed
+  FOREIGN KEY (customer_id) REFERENCES customer(ID) ON UPDATE CASCADE ON DELETE CASCADE,
+  FOREIGN KEY (appointment_service_id) REFERENCES appointment_service(ID) ON UPDATE CASCADE ON DELETE CASCADE,
+  FOREIGN KEY (hairStylist_id) REFERENCES hairStyist(ID) ON UPDATE CASCADE ON DELETE CASCADE,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE appointment_service (
+  ID int NOT NULL AUTO_INCREMENT,
+  service_type int(100) NOT NULL,
+  -- 0 = simpleCut, 1 = premiumCut, 2 = simpleColor, 3 = premiumColor, 4 = simpleStyling, 5 = premiumStyling
+  appointment_id int(100) NOT NULL,
+  FOREIGN KEY (appointment_id) REFERENCES appointment(ID) ON UPDATE CASCADE ON DELETE CASCADE,
+  PRIMARY KEY (ID)
+);
+
+
+
+
