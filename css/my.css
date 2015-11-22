@@ -170,7 +170,11 @@
   margin-left: -5%;
   padding-left: 2%;
 }
+<<<<<<< HEAD
   
+=======
+	
+>>>>>>> refs/remotes/origin/master
 .login3 {
   width: 65%;
   height: 45px;
@@ -329,7 +333,11 @@
 
 .hauto{
   width: 120%;
+<<<<<<< HEAD
   height:auto;
+=======
+	height:auto;
+>>>>>>> refs/remotes/origin/master
   display: block;
   margin-left: -10%;
 }
