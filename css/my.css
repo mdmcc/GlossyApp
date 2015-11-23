@@ -177,7 +177,7 @@
 .signup5 {
   background-color: white;
   width: 101vw;
-  margin-left: -4%;
+  margin-left: -5%;
   padding-left: 2%;
 }
 <<<<<<< HEAD
@@ -343,11 +343,8 @@
 
 .hauto{
   width: 120%;
-<<<<<<< HEAD
   height:auto;
-=======
 	height:auto;
->>>>>>> refs/remotes/origin/master
   display: block;
   margin-left: -10%;
 }
@@ -730,18 +727,10 @@ pre {
   padding-left: 2%;
 }
 
-.signup3 {
-  background-color: white;
-  border-top: 1px gray solid;
-  width: 101vw;
-  margin-left: -4%;
-  padding-left: 2%;
-}
-
 .signup5 {
   background-color: white;
-  width: 101vw;
-  margin-left: -4%;
+  width: 99.2vw;
+  margin-left: -6%;
   padding-left: 2%;
 }
     
