@@ -109,6 +109,7 @@
   font-size: 12pt;
   margin-left: -10%;
   margin-top: 7%;
+  border:none;
 }
 
 .login2 {
@@ -139,7 +140,8 @@
 }
     
 .signin {
-  margin-top: 8%; 
+  margin-top: 8%;
+  border:none; 
 }
     
 .signup {
@@ -162,11 +164,19 @@
   width: 105vw;
   margin-left: -5%;
   padding-left: 2%;
+  border-top:none;
 }
 
 .signup4 {
   background-color: white;
   width: 105vw;
+  margin-left: -5%;
+  padding-left: 2%;
+}
+
+.signup5 {
+  background-color: white;
+  width: 101vw;
   margin-left: -5%;
   padding-left: 2%;
 }
@@ -333,7 +343,7 @@
   display: block;
   margin-left: -10%;
 }
-}
+
 
 @media (min-width: 700px) {
 
@@ -515,6 +525,13 @@
   padding-left: 2%;
 }
 
+.signup5 {
+  background-color: white;
+  width: 101vw;
+  margin-left: -4%;
+  padding-left: 2%;
+}
+
 .btn {
   height: 70px;
   font-size: 22pt;
@@ -684,9 +701,11 @@ pre {
 
 .signup3 {
   background-color: white;
+  border-top: 1px gray solid;
   width: 99.2vw;
   margin-left: -6%;
   padding-left: 2%;
+  border:none;
 }
 
 .signin {
@@ -703,11 +722,10 @@ pre {
   padding-left: 2%;
 }
 
-.signup3 {
+.signup5 {
   background-color: white;
-  border-top: 1px gray solid;
-  width: 101vw;
-  margin-left: -4%;
+  width: 99.2vw;
+  margin-left: -6%;
   padding-left: 2%;
 }
     
