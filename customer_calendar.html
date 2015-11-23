@@ -7,24 +7,19 @@
   <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
   <link href="css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="css/my.css"/>
+  <link href='css/fullcalendar.css' rel='stylesheet' />
+  <link href='css/fullcalendar.min.css' rel='stylesheet' />
   <script type="text/javascript" src="js/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/glossy2.0
   <script src='js/moment.min.js'></script>
   <script src='js/jquery.min.js'></script>
   <script src='js/jquery-ui.custom.min.js'></script>
   <script src='js/fullcalendar.min.js'></script>
   <script src='js/fullcalendar.js'></script>
-
   <script src="js/bootstrap.js" ></script>
   <script src="js/npm.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?callback=loadMyMap&libraries=places"async defer></script>
-  <script src="js/customerMap.js"></script>
 </head>
 <body>
 
@@ -66,7 +61,41 @@
     <hr>
         
       <div class="row">
-        <div id='calendar'></div>    
+        <div id='calendar'></div> 
+  <script>
+    $(document).ready(function() {
+    
+    $.ajax({
+      url:"php/appointment.php",
+      dataType:"json",
+      success:function(resp){
+        console.log(resp);
+        $('#calendar').fullCalendar({
+          header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+          },
+          defaultDate: '2015-11-11', // need to add a now/today's date 
+          editable: true,
+          eventLimit: true, // allow "more" link when too many events
+          events: resp,
+          eventClick: function(calEvent, jsEvent, view){
+            console.log(calEvent.title);
+            console.log(calEvent.data);
+          }
+        });
+      }
+    })
+    // make a div, append a button , accept or decline
+    // in appoinment.php store appointment.id so when I click on the event 2 buttons show up; if accept, update appoinment info (hairstylist etc) WHERE id = appointment_id, hairStylist_id = $_Session['id']. WHen I make the buttons, I can make the accept button id = appointment_id so when I do an AJAX d
+    //
+    // data: {appointent.id: button.id}
+    //if the hairSTylist id matches the appoinment hairStylist id, change the colour to green; or else it'll be 
+    
+  });
+
+    </script>   
       </div>
 
   <hr>
@@ -88,38 +117,5 @@
         </div>
       </nav>
     </div>
-<<<<<<< HEAD
-=======
-    </div>
-       
-      <hr>
-      
-      
-    <div class="row">
-    <!--   <div class="col-xs-12 poscenter calheight"> -->
-          <div id="calendar"></div>    
-    </div>
-      <hr>
-                
-       <nav> 
-        <div class="footrow">
-        <a href="customer_profile_edit.html">
-          <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/profile.gif" alt="First button" id = "buttonimg1"/></button>
-        </a>
-        <a href="customer_services.html">
-          <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/blowdryer.gif" alt="Second Button" id = "buttonimg2"></button>
-        </a>
-        <a href="customer_calendar.html">
-         <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/calendartrans.gif" alt="Third button" id = "buttonimg3"/></button>
-        </a>
-        <a href="about.html">
-          <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/info.gif" alt="fourth button" id = "buttonimg4"></button>
-        </a>
-      </div>
-        </nav>
-  </div>
->>>>>>> origin/glossy2.0
-=======
->>>>>>> origin/glossy2.0
 </body>
 </html>
