@@ -13,6 +13,11 @@
     <script src="js/bootstrap.js" ></script>
 
   <script src="js/customerFB_api.js" ></script>
+    <style>
+        #fbLoginBut{
+           margin-left: 29%;
+        }
+    </style>
 
 </head>
 <body>
@@ -69,9 +74,9 @@
         </div>
           
         <div class="row logbut">
-          <a href="customer_appointment.html">
-            <button type="submit" id = "next" class="col-xs-12 btn btn-success">Next</button>
-          </a>
+          <!-- <a href="customer_appointment.html"> -->
+          <button type="submit" id = "next" class="col-xs-12 btn btn-success">Next</button>
+          <!-- </a> -->
         </div>
         <hr>
     </fieldset>
@@ -84,13 +89,13 @@
     <form name="cust_login" method='post' action='./php/login_cust.php'>
         <fieldset>
         <div class="row signup3">
-            <div class="col-xs-3 signin">Log in:</div>
+            <div class="col-xs-3 login2">Log in:</div>
            <input class="col-xs-9 loginbox2" type="text" name="email" placeholder="Email"/> 
            <input class="col-xs-9 loginbox" type="text" name="password" placeholder="Password"/> 
         </div>
         
          <div class="row logbut">
-           <a href="customer_services.html"> 
+           <a href="customer_appointment.html"> 
             <button type="button" class="col-xs-12 btn btn-success">Submit</button>
           </a>
           </div>
