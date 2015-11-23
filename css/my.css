@@ -734,6 +734,23 @@ pre {
   margin-left: -6%;
   padding-left: 2%;
 }
+
+.appselect {
+  background-color: white;
+  width: 99.2vw;
+  margin-left: -6%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
+.appselect2 {
+  background-color: white;
+  border-top: 1px gray solid;
+  width: 99.2vw;
+  margin-left: -6%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
     
 .logbut {
   margin: auto;
