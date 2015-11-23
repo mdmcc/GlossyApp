@@ -1,13 +1,6 @@
 <?php
     include("connection.php");
     
-    $connect = mysqli_connect("localhost", "root", "root", "glossy"); 
-    
-    if(mysqli_connect_errno()){
-        echo "Something went wrong connecting... " . mysqli_connect_error();
-    // exit();
-    }
-
     // First is to insert Appointment Service data from POST 
     // To get an ID for our relation
     $insertAppointmentServiceSql = "INSERT INTO appointment_service (cut_type, color_type, styling_type) VALUES (" . $_POST['cut_type'] . ", " . $_POST['color_type'] . ", " . $_POST['styling_type'] . ")";

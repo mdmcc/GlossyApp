@@ -1,3 +1,5 @@
+var lat = "";
+var lng = "";
 
 
 // map2 for customers 
@@ -47,6 +49,7 @@ markers.forEach(function(marker) {
       marker.setMap(null);
     });
     markers = [];
+    console.log(places);
 
     // For each place, get the icon, name and location.
     var bounds = new google.maps.LatLngBounds();
@@ -67,6 +70,8 @@ console.log(bounds);
         title: place.name,
         position: place.geometry.location
       }));
+
+      //console.log(place.geometry);
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.

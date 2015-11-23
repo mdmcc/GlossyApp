@@ -10,11 +10,11 @@
   <link rel="stylesheet" href="css/my.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src='js/moment.min.js'></script>
-  <script src='js/jquery.min.js'></script>
-  <script src='js/jquery-ui.custom.min.js'></script>
-  <script src='js/fullcalendar.min.js'></script>
-  <script src='js/fullcalendar.js'></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.custom.min.js"></script>
+  <script src="js/fullcalendar.min.js"></script>
+  <script src="js/fullcalendar.js"></script>
   <script src="js/bootstrap.js" ></script>
   <script src="js/npm.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
@@ -141,7 +141,6 @@
           url:"php/customerSubmit.php",
           dataType:"json",
           type:"POST",
-          // data: $('form').serialize()
           data:{
             cut_type: $('#cut').find(":selected").val(), 
             color_type: $('#color').find(":selected").val(), 
@@ -169,10 +168,9 @@
           url:"php/customerSubmit.php",
           dataType:"json",
           type:"POST",
-          // data: $('form').serialize()
           data:{
             customer_id: 2,
-            appointment_service_id: 1, 
+            //appointment_service_id: 1, 
             cut_type: $('#cut').find(":selected").val(), // this should be in a separate AJAX function?
             color_type: $('#color').find(":selected").val(), // this should be in a separate AJAX function?
             styling_type: $('#styling').find(":selected").val(), // this should be in a separate AJAX function?
