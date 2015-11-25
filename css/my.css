@@ -861,6 +861,14 @@ pre {
   font-size: 13px;
   font-weight: 300;
 }
+
+#signerror {
+	color:#C51518;
+		
+}
+    #logerror {
+		color:#C51518;
+	}
     
 /*back button CSS
 .backbtn {
