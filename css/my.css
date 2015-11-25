@@ -362,6 +362,14 @@
   margin-left: -10%;
 }
 
+#signerror {
+	color:#C51518;
+		
+}
+    #logerror {
+		color:#C51518;
+	}
+
 
 @media (min-width: 700px) {
 
@@ -584,6 +592,14 @@ pre {
   padding-left: 5%;
   padding-bottom: 2%;
 }
+
+#signerror {
+	color:#C51518;
+		
+}
+    #logerror {
+		color:#C51518;
+	}
 
 }
 
