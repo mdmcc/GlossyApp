@@ -3,7 +3,7 @@
 //    "use strict";
 
 document.stylist_signup.onsubmit = function signupval() {
-		var isValid = passwrdConfirm() && input_fn() && input_ln() && input_email() && input_pass();
+		var isValid = passwrdConfirm() && input_fn() && input_ln() && input_email() && input_pass() && input_pass2();
 		//console.log('is valid', isValid);
 		//alert('yay');
 		//return isValid;
@@ -74,6 +74,19 @@ function input_pass() {
 		return true;
 	}
 }
+
+function input_pass2() {
+	var pass2_length = document.getElementById("pass2").value;
+	var textLength = pass2_length.length;
+	var txt6 = "Your password has to be between 5 and 50 characters (test)";
+	document.getElementById("signerror").innerHTML = txt6;
+	if (textLength < 5 || textLength > 50 ) {
+		return false;
+	}  else if (textLength > 5 || textLength < 50 ) {
+		return true;
+	}
+}
+	
 	
 	
 //};
