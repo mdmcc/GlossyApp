@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-B">
-  <title>Customer Appointment Services</title>
+  <title>Customer Appointment</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -49,27 +49,27 @@
       <div class="row">
         <div class="col-xs-4 servicesBox">Cut:</div>
           <select class="col-xs-8 login3" id="cut" name="cut">
-            <option value=0>N/A</option>
-            <option value=1>Simple select: Services ranging from a trim to one length hair cuts - $50</option>
-            <option value=2>Premium select: Complex hair cuts including many layers - $90</option>
+            <option value='0'>N/A</option>
+            <option value='1'>Simple select: Services ranging from a trim to one length hair cuts - $50</option>
+            <option value='2'>Premium select: Complex hair cuts including many layers - $90</option>
           </select>  
       </div>
             
       <div class="row">
         <div class="col-xs-4 servicesBox">Colour:</div>
           <select class="col-xs-8 login3" id="color" name="color">
-            <option value=0>N/A</option>
-            <option value=1>Simple select: Services ranging from single process colour or partial highlights - $70</option>
-            <option value=2>Premium select: Services ranging from colour and partial highlights to full set of highlights - $140</option>
+            <option value='0'>N/A</option>
+            <option value='1'>Simple select: Services ranging from single process colour or partial highlights - $70</option>
+            <option value='2'>Premium select: Services ranging from colour and partial highlights to full set of highlights - $140</option>
           </select>  
       </div> 
             
       <div class="row">
         <div class="col-xs-4 servicesBox">Styling:</div>
           <select class="col-xs-8 login3" id="styling" name="styling">
-            <option value=0>N/A</option>
-            <option value=1>Simple select: Blow outs that take up to 45 minutes - $50</option>
-            <option value=2>Premium select: Updos - $90</option>
+            <option value='0'>N/A</option>
+            <option value='1'>Simple select: Blow outs that take up to 45 minutes - $50</option>
+            <option value='2'>Premium select: Updos - $90</option>
           </select> 
       </div>
 
@@ -155,15 +155,12 @@
           timePicker: true,
           timePickerIncrement: 15,
           locale: {
-              format: 'YYYY-MM-DD hh:mm:00'
+            format: 'YYYY-MM-DD hh:mm:00'
           }
         });
 
       $("#customerSubmit").click(function(event) {
         event.preventDefault();
-
-
-        console.log(lat, lng);
 
         $.ajax({
           url:"php/customerSubmit.php",
@@ -172,17 +169,17 @@
           data:{
             customer_id: 2,
             appointment_service_id: 1, 
-            cut_type: $('#cut').find(":selected").val(), // this should be in a separate AJAX function?
-            color_type: $('#color').find(":selected").val(), // this should be in a separate AJAX function?
-            styling_type: $('#styling').find(":selected").val(), // this should be in a separate AJAX function?
+            cut_type: $('#cut').find(":selected").val(), // can these stay here, or do they have to be moved?
+            color_type: $('#color').find(":selected").val(), 
+            styling_type: $('#styling').find(":selected").val(), 
             customer_dateTime: $('input[name="appointment"]').val(),
             customer_lat: lat,
             customer_lng: lng,
-            hairStylist_id: 1
+            hairStylist_id: "NULL"
           },
 
           success: function(resp){
-            document.location.href="customer_calendar.html"; // works only on success; need an error message
+            document.location.href="customer_calendar.html"; 
           },
 
           error: function(XMLHttpRequest, textStatus, errorThrown) { 

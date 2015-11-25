@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-B">
-  <title>Stylist calender</title>
+  <title>Stylist Calender</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
   <link href="css/bootstrap.css" rel="stylesheet">
@@ -45,6 +45,26 @@
   padding: 0%;
 }
 }
+
+#appointmentInfo {
+    position: fixed;
+    top: 250px;
+    left: 37%;
+    width: 330px;
+    height: 260px;
+    background-color: white;
+    z-index: 10;
+    display: none;
+    padding: 20px;
+    border: 1px solid #e7e7e7;
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 10px;
+    color: #A00909;
+  }
+
 </style>
 <body>
 
@@ -67,6 +87,18 @@
       <div class="row">
     <!--   <div class="col-xs-12 poscenter calheight"> -->
           <div id='calendar'></div>    
+
+        <div id='appointmentInfo'>
+          <div class="closeButton">Close</div>
+          <h4 id='appointmentTitle'></h4>
+          <p class="appointmentTime"></p>
+          <p class="confirmation"></p>
+          <p class="name"></p>
+          <button id="accept">Accept</button>
+          <button id="ignore">Ignore</button>
+
+        </div> 
+
   <script>
     $(document).ready(function() {
     
@@ -81,22 +113,39 @@
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
           },
-          defaultDate: '2015-11-11', // need to add a now/today's date 
+          // defaultDate: '2015-11-11', // need to add a now/today's date 
           editable: true,
-          eventLimit: true, // allow "more" link when too many events
+          eventLimit: true, 
           events: resp,
           eventClick: function(calEvent, jsEvent, view){
+            $("#appointmentInfo").css("display", "block");
+            $("#appointmentTitle").text(calEvent.title);
+            $(".appointmentTime").text(calEvent.start);
+            $(".confirmation").text(calEvent.confirmation);
+            $(".name").text(calEvent.first_name + " " + calEvent.last_name);
+
             console.log(calEvent.title);
-            console.log(calEvent.data);
+            console.log(calEvent.confirmation);
           }
         });
       }
-    })
+    });
+
+
+    $(".closeButton").on('click', function(){
+      $("#appointmentInfo").css("display", "none");
+    });
+
+    $("#accept").on('click', function(){
+      // ajax call to update appointment and add hairstylist_id and update appointment status
+    });
+
+
     // make a div, append a button , accept or decline
-    // in appoinment.php store appointment.id so when I click on the event 2 buttons show up; if accept, update appoinment info (hairstylist etc) WHERE id = appointment_id, hairStylist_id = $_Session['id']. WHen I make the buttons, I can make the accept button id = appointment_id so when I do an AJAX d
+    // in appoinment.php store appointment.id so when I click on the event 2 buttons show up; if accept, update appoinment info (hairstylist etc) WHERE id = appointment_id, hairStylist_id = $_Session['id']. When I make the buttons, I can make the accept button id = appointment_id so when I do an AJAX id
     //
     // data: {appointent.id: button.id}
-    //if the hairSTylist id matches the appoinment hairStylist id, change the colour to green; or else it'll be 
+    //if the hairStylist id matches the appoinment hairStylist id, change the colour to green; or else it'll be 
     
   });
 
@@ -109,9 +158,6 @@
         <a href="stylist_edit_profile.html">
           <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/profile.gif" id = "buttonimg1"/></button>
         </a>
-       <!--  <a href="stylist_services.html">
-          <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/blowdryer.gif" id = "buttonimg2"></button>
-        </a> -->
         <a href="stylist_calendar.html">
          <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/calendartrans.gif" id = "buttonimg3"/></button>
         </a>

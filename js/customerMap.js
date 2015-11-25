@@ -70,7 +70,8 @@ console.log(bounds);
         title: place.name,
         position: place.geometry.location
       }));
-
+      lat = place.geometry.location.lat();
+      lng = place.geometry.location.lng();
       //console.log(place.geometry);
 
       if (place.geometry.viewport) {

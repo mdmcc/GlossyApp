@@ -1,17 +1,20 @@
 <?php
     include("connection.php");
-    
-    // First is to insert Appointment Service data from POST 
-    // To get an ID for our relation
-    $insertAppointmentServiceSql = "INSERT INTO appointment_service (cut_type, color_type, styling_type) VALUES (" . $_POST['cut_type'] . ", " . $_POST['color_type'] . ", " . $_POST['styling_type'] . ")";
-    $appointmentServiceResults = mysqli_query ($connect, $insertAppointmentServiceSql);
+
+    if(mysqli_connect_errno()){
+        echo "Something went wrong connecting... " . mysqli_connect_error();
+    // exit();
+    }
+
+    $appointmentServiceSql = "INSERT INTO appointment_service (cut_type, color_type, styling_type) VALUES (" . $_POST['cut_type'] . ", " . $_POST['color_type'] . ", " . $_POST['styling_type'] . ")";
+    $appointmentServiceResults = mysqli_query ($connect, $appointmentServiceSql);
     $insertAppointmentInsertId = mysqli_insert_id($connect);
 
-    // Second, get POST data to insert appointment data
-    $insertAppointmentSql = "INSERT INTO appointment (customer_id, appointment_service_id, customer_dateTime, customer_lng, customer_lat, hairStylist_id, appointment_status) VALUES (" . $_POST['customer_id'] . ", " . $insertAppointmentInsertId  . ", '" . $_POST['customer_dateTime'] . "', " . $_POST['customer_lng'] . ", " . $_POST['customer_lat'] . ", " . $_POST['hairStylist_id'] . ", 0)";
-
-    $results = mysqli_query ($connect, $insertAppointmentSql);
-
+    
+    $appointmentSql = "INSERT INTO appointment (customer_id, appointment_service_id, customer_dateTime, customer_lng, customer_lat, hairStylist_id, appointment_status) VALUES (" . $_POST['customer_id'] . ", " . $insertAppointmentInsertId  . ", '" . $_POST['customer_dateTime'] . "', " . $_POST['customer_lng'] . ", " . $_POST['customer_lat'] . ", " . $_POST['hairStylist_id'] . ", 0)";
+   // echo $appointmentSql;
+    $results = mysqli_query ($connect, $appointmentSql);
+    //exit;
     // $cut = null;
     // $color = null;
     // $styling = null;
@@ -63,21 +66,13 @@
     //     }
     // }
 
-    //$appointment = getAppointmentStuff($_POST);
-
     // $sql = "INSERT INTO appointment (customer_id, appointment_service_id, customer_dateTime, customer_lng, customer_lat, hairStylist_id, appointment_status) values ('".$_POST["customer_id"]."', '".$_POST["appointment_service_id"]."', '".$_POST["customer_dateTime"]."', '".$_POST["customer_lng"]."', '".$_POST["customer_lat"]."', '0', '0')";
     // $sql = "INSERT INTO appointment (service_id, customer_id, customer_price, customer_dateTime, customer_lng, customer_lat, appointment_status) values ('".$_POST["service_id"]."', '".$_POST["customer_id"]."', '".$_POST["customer_price"]."', '".$_POST["customer_dateTime"]."', '".$_POST["customer_lng"]."', '".$_POST["customer_lat"]."', '0')";
 
-    $results = mysqli_query ($connect, $sql);
+    // $results = mysqli_query ($connect, $sql);
     
     if($results){
         echo json_encode("success");
     };
 
-    // function getAppointmentStuff($input) {
-    //     // Get data from appointment_service table
-    //     // return it
-    //     $sql = "SELECT * FROM appointment_service WHERE cut_type ";
-    // }
-
-  ?>  
+  ?>
