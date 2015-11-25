@@ -58,7 +58,7 @@
   background-color: #D5CFE1;
   font-size: 11pt;
   /*margin-top: 2%;*/
-  margin-bottom: -2%;
+  margin-bottom: 0%;
 }
 
 #buttonimg1 {
@@ -230,6 +230,23 @@
   margin-top: 4.5%;
 }
 
+.appselect {
+  background-color: white;
+  width: 99.5vw;
+  margin-left: -5%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
+.appselect2 {
+  background-color: white;
+  border-top: 1px gray solid;
+  width: 99.5vw;
+  margin-left: -5%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
 #Date {
   margin-left: 7%;
   color: gray;
@@ -271,6 +288,7 @@
 }
 
 .cal {
+  margin-top: 2%;
   margin: auto;
   display: block;
 }
@@ -381,6 +399,7 @@
 
 #profilesubhead {
   font-size: 20pt;
+  padding-bottom: 2%;
 }
 
 .footrow {
@@ -413,6 +432,7 @@
   width: 50%;
   height: 50px;
   font-size: 20pt;
+  margin-top: 1%;
 }
 
 #calendar {
@@ -546,6 +566,23 @@
 
 pre {
   font-size: 18pt;
+}
+
+.appselect {
+  background-color: white;
+  width: 99.5vw;
+  margin-left: -3%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
+.appselect2 {
+  background-color: white;
+  border-top: 1px gray solid;
+  width: 99.5vw;
+  margin-left: -3%;
+  padding-left: 5%;
+  padding-bottom: 2%;
 }
 
 }
@@ -824,3 +861,24 @@ pre {
   font-size: 13px;
   font-weight: 300;
 }
+    
+/*back button CSS
+.backbtn {
+  color: #fff;
+  background-color: #B9E1B9;
+  border-color: #4cae4a;
+
+}
+
+.backbtn:focus,
+.backbtn.focus {
+  color: #fff;
+  background-color: #B9E1B9;
+  border-color: #255625;
+}
+.backbtn:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: indianred;
+}
+     */
