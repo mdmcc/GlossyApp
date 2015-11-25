@@ -1,12 +1,9 @@
 <?php
 include("connection.php");
 
-<<<<<<< Updated upstream
 $user_info = "INSERT INTO customer (customer_email, customer_password, customer_confirmpass, customer_firstName, customer_lastName) VALUES ('".$_POST['email']."', '".$_POST['password']."', '".$_POST['confirmPassword']."', '".$_POST['firstname']."', '".$_POST['lastname']."')";  
 
-=======
-// mysqli_select_db("glossy", $connect);
->>>>>>> Stashed changes
+//mysqli_select_db("glossy", $connect);
 
 $result = mysqli_query($connect, $user_info);
 
