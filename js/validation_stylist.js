@@ -44,7 +44,7 @@ function input_ln() {
 	   //document.getElementById("lastname").setAttribute('placeholder', 'Last name must be between 5 and 50 characters');
 	   document.getElementById("signerror").innerHTML = txt3;
 		return false;
-	}  else if (textLength > 1 || textLength < 50 ) {
+	}  else if (textLength > 5 || textLength < 50 ) {
 		return true;
 	}
 }
@@ -57,7 +57,7 @@ function input_email() {
 	if (textLength < 5 || textLength > 50) {
 	 // document.getElementById("email").setAttribute('placeholder', 'Email must be between 5 and 50 characters');
 		return false;
-	}  else if (textLength > 1 || textLength < 50 ) {
+	}  else if (textLength > 5 || textLength < 50 ) {
 		return true;
 	}
 }
@@ -70,7 +70,7 @@ function input_pass() {
 	if (textLength < 5 || textLength > 50 ) {
 	 //  document.getElementById("pass1").setAttribute('placeholder', 'Password must be between 5 and 50 characters');
 		return false;
-	}  else if (textLength > 1 || textLength < 50 ) {
+	}  else if (textLength > 5 || textLength < 50 ) {
 		return true;
 	}
 }

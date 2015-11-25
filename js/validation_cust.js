@@ -1,6 +1,6 @@
 // JavaScript Document
 //window.onload = function () {
-//    "use strict";
+// "use strict";
 
 	document.cust_signup.onsubmit = function signupval() {
 		var isValid = passwrdConfirm() && input_fn() && input_ln() && input_email() && input_pass();
@@ -42,7 +42,7 @@ function input_ln() {
 	if (textLength < 5 || textLength > 50 ) {
 	   document.getElementById("signerror").innerHTML = txt3;
 		return false;
-	}  else if (textLength > 1 || textLength < 50 ) {
+	}  else if (textLength > 5 || textLength < 50 ) {
 		return true;
 	}
 }
@@ -54,7 +54,7 @@ function input_email() {
 	document.getElementById("signerror").innerHTML = txt4;
 	if (textLength < 5 || textLength > 50) {
 		return false;
-	}  else if (textLength > 1 || textLength < 50 ) {
+	}  else if (textLength > 5 || textLength < 50 ) {
 		return true;
 	}
 }
@@ -66,7 +66,7 @@ function input_pass() {
 	document.getElementById("signerror").innerHTML = txt5;
 	if (textLength < 5 || textLength > 50 ) {
 		return false;
-	}  else if (textLength > 1 || textLength < 50 ) {
+	}  else if (textLength > 5 || textLength < 50 ) {
 		return true;
 	}
 }
