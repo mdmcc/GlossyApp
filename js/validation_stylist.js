@@ -3,11 +3,12 @@
 //    "use strict";
 
 document.stylist_signup.onsubmit = function signupval() {
-		var isValid = passwrdConfirm() && input_fn() && input_ln() && input_email() && input_pass() && input_pass2();
-		//console.log('is valid', isValid);
-		//alert('yay');
-		//return isValid;
+		//var isValid = passwrdConfirm() && input_fn() && input_ln() && input_email() && input_pass() && input_pass2();
+		if ((passwrdConfirm() === true) && (input_fn() === true) && (input_ln() === true) && (input_email() === true) && (input_pass() === true)) {
+			return true;
+		}else {
 		return false;
+		}
 	};
 	
 function passwrdConfirm() {
@@ -40,11 +41,11 @@ function input_ln() {
 	var ln_length = document.getElementById("lastname").value;
 	var textLength = ln_length.length;
 	var txt3 = "Your last name has to be between 5 and 50 characters";
-	if (textLength < 5 || textLength > 50 ) {
+	if (textLength < 1 || textLength > 50 ) {
 	   //document.getElementById("lastname").setAttribute('placeholder', 'Last name must be between 5 and 50 characters');
 	   document.getElementById("signerror").innerHTML = txt3;
 		return false;
-	}  else if (textLength > 5 || textLength < 50 ) {
+	}  else if (textLength > 1 || textLength < 50 ) {
 		return true;
 	}
 }
