@@ -5,7 +5,9 @@ $user_info = "INSERT INTO hairStylist (hairStylist_email, hairStylist_password, 
 
 $result = mysqli_query($connect, $user_info);
 if($result)
-//{echo "Your information was added to the database.";}
-header("Location:/stylist_calendar.html");
+{echo "Your information was added to the database.";}
+else {
+	echo mysqli_error();
+}
 
 ?> 
