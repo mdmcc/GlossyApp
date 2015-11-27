@@ -43,7 +43,7 @@
    /* height: 40px;*/
     background-color: #D5CFE1;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 5px;
     padding-bottom: 15px;
 }
 
@@ -677,7 +677,8 @@ pre {
 
 #profilesubhead {
   font-size: 20pt;
-  margin-bottom: 1%;
+  margin-bottom: -1.5%;
+  margin-top: 0.6%;
 }
 
 .typebut {
