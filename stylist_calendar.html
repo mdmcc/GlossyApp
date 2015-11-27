@@ -7,6 +7,7 @@
   <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
   <link href="css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="css/my.css"/>
+  <link href='css/calendar.css' rel='stylesheet' />
   <link href='css/fullcalendar.css' rel='stylesheet' />
   <link href='css/fullcalendar.min.css' rel='stylesheet' />
   <script type="text/javascript" src="js/script.js"></script>
@@ -28,44 +29,6 @@
    
 </head>
 
-<style>
-  body {
-    margin: 40px 10px 0px;
-    padding: 0;
-    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-    max-height: 620px;
-  }
-
-@media (min-width: 700px) {
-  .footrow {
-  background-color: #D5CFE1;
-  margin: -2%;
-  margin-top: 0%;
-  margin-left: 1%;
-  padding: 0%;
-}
-}
-
-#appointmentInfo {
-    position: fixed;
-    top: 250px;
-    left: 37%;
-    width: 330px;
-    height: 260px;
-    background-color: white;
-    z-index: 10;
-    display: none;
-    padding: 20px;
-    border: 1px solid #e7e7e7;
-  }
-
-  .closeButton {
-    position: absolute;
-    right: 10px;
-    color: #A00909;
-  }
-
-</style>
 <body>
 
     <div class="container">
@@ -167,7 +130,7 @@
       <hr>
  
     <nav> 
-      <div class="footrow">
+      <div class="footrowStyle">
         <a href="stylist_edit_profile.html">
           <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/profile.gif" id = "buttonimg1"/></button>
         </a>
