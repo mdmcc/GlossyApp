@@ -4,10 +4,6 @@
     <meta charset="UTF-B">
     <title>Stylist Signup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
-
-     
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/my.css"/>
 
@@ -17,6 +13,11 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script src="js/customerFB_api.js" ></script>
    
+    <style>
+        #fbLoginBut{
+           margin-left: 29%;
+        }
+    </style>
 </head>
 <body>
   <div id="fb-root"></div>
@@ -42,7 +43,7 @@
          </div>
       </div>
          
-<form name="stylist_signup" method="post" action="./php/signup_stylist.php">
+<form name="stylist_signup" method='post' action='./php/signup_stylist.php'>
     <fieldset>
          <hr>
         <div class="row signup2">
@@ -73,8 +74,7 @@
                   
       <div class="row logbut">
         <a href="stylist_calendar.html">
-            <button type="button" id = "next" class="col-xs-12 btn btn-success">Next</button>
-           <!-- <button type="button" id="signbackk" class="col-xs-12 btn btn-default">Back</button>-->
+          <button type="button" id = "next" class="col-xs-12 btn btn-success">Next</button>
         </a>
       </div>
       <hr>
@@ -86,10 +86,10 @@
               Already a user?
             </div>
         </div>
-        <form name="stylist_login" method="post" action="./php/login_stylist.php">
+        <form name="stylist_login" method='post' action='./php/login_stylist.php'>
             <fieldset>
         <div class="row signup3">
-            <div class="col-xs-3 signin">Log in:</div>
+            <div class="col-xs-3 login2">Log in:</div>
            <input class="col-xs-9 loginbox2" type="text" name="email" placeholder="Email"/> 
            <input class="col-xs-9 loginbox" type="text" name="password" placeholder="Password"/> 
         </div>
@@ -101,20 +101,13 @@
           </div>
             </fieldset>
         </form>
-        
-         <div class="row">
+          <div class="row">
             <div class="row" id = "fblog">
-            
             </div>
           </div>
 
-          <button class="fbLoginBut" type="submit"><img src = "./assets/facebook-login.gif" alt = "fblog" class = "fblogimg"></button>
+           <button id="fbLoginBut" type="submit"><img src = "./assets/facebook-login.gif" alt = "fblog" class = "fblogimg"></button>
    </div>    
-     <script>/*
-        var signback = document.getElementById("signbackk");
-            signback.onclick = function(){
-              location.href = "./index.html";
-            }; */
-    </script>    
+    
 </body>
 </html>

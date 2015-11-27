@@ -1,0 +1,102 @@
+@media (min-width: 0px) {
+  .footrowStyle {
+  background-color: #D5CFE1;
+  margin: -2%;
+  margin-top: 0%;
+  margin-left: 1%;
+  
+}
+
+#appointmentInfo {
+    position: fixed;
+    top: 250px;
+    left: 10;
+    width: 80%;
+    height: 37%;
+    background-color: white;
+    z-index: 10;
+    display: none;
+    padding: 2px;
+    border: 1px solid #e7e7e7;
+    font-size: 11pt;
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 10px;
+    color: #A00909;
+  }
+  }
+
+@media (min-width: 700px) {
+  .footrowStyle {
+  background-color: #D5CFE1;
+  margin: -2%;
+  margin-top: 0%;
+  margin-left: 1%;
+  padding: 0%;
+}
+
+
+#appointmentInfo {
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    width: 42%;
+    height: 52%;
+    background-color: white;
+    z-index: 10;
+    display: none;
+    padding: 20px;
+    border: 1px solid #e7e7e7;
+    font-size: 16pt;
+    box-shadow: 5px black;
+  }
+  
+#appointmentTitle {
+    font-size: 18pt;
+    margin-right: 10px;
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 10px;
+    color: #A00909;
+  }
+  }
+  
+  @media (min-width: 1020px) {
+  .footrowStyle {
+  background-color: #D5CFE1;
+  margin: -2%;
+  margin-top: 0%;
+  margin-left: 1%;
+  padding: 0%;
+  padding-left: 20%;
+}
+
+
+#appointmentInfo {
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    width: 420px;
+    height: 280px;
+    background-color: white;
+    z-index: 10;
+    display: none;
+    padding: 20px;
+    border: 1px solid #e7e7e7;
+    font-size: 16pt;
+  }
+  
+  #appointmentTitle {
+    font-size: 20pt;
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 10px;
+    color: #A00909;
+  }
+  }
