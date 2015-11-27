@@ -1,17 +1,11 @@
 <?php
 	include("connection.php");
 
-	$query = "SELECT customer.customer_firstName, customer.customer_lastName, appointment.customer_dateTime, appointment_service.cut_type, appointment_service.color_type, appointment_service.styling_type, appointment.hairStylist_id FROM appointment
+	$query = "SELECT customer.customer_firstName, customer.customer_lastName, appointment.customer_dateTime, appointment_service.cut_type, appointment_service.color_type, appointment_service.styling_type, appointment.hairStylist_id, appointment.id, hairStylist.hairStylist_firstName, hairStylist.hairStylist_lastName FROM appointment
 		INNER JOIN appointment_service ON appointment_service.ID = appointment.appointment_service_id
-		INNER JOIN customer ON customer.id = appointment.customer_id AND appointment.customer_id = 2";
-		// remove hard coded appointment.customer_id = 2 
-		// add stylist first and last name
-
-		 // $sql = "SELECT student.first_name, student.last_name, course_student.time
-   //              FROM course INNER JOIN course_student ON course.ID = course_student.course_id
-   //              INNER JOIN student ON student.id = course_student.student_id
-   //              AND course.number = 'COMP 1170'";
-
+		INNER JOIN customer ON customer.id = appointment.customer_id AND appointment.customer_id = 2
+		INNER JOIN hairstylist ON hairStylist.id = appointment.hairStylist_id";
+		// remove hard coded appointment.customer_id = 2 and appointment.hairStylist_id = 2
 
 	$result = mysqli_query($connect, $query);
 
@@ -48,16 +42,20 @@
 			if($row['hairStylist_id']){
 				$color='#00a0b0';
 				$confirmation = "Booked appointment";
+
 			}
 
 			$obj = array(
+				"id"=>$row['id'],
 				"title"=>$str,
 				"start"=>$row['customer_dateTime'],
 				"end"=>$row['customer_dateTime'],
 				"confirmation"=>$confirmation,
 				"backgroundColor"=>$color,
 				"first_name"=>$row['customer_firstName'],
-				"last_name"=>$row['customer_lastName']
+				"last_name"=>$row['customer_lastName'],
+				// "stylist_firstname"=>$row['stylist_firstName'],
+				// "stylist_lastname"=>$row['stylist_lastName'],
 			);
 			array_push($arr, $obj);
 

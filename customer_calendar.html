@@ -73,7 +73,7 @@
 
       <div class="row">
         <div class="col-xs-12 who" id="profilesubhead">
-          Your confirmed and tentative bookings
+          Your confirmed and tentative appointments
         </div>
       </div>
          
@@ -87,7 +87,10 @@
           <p class="appointmentTime"></p>
           <p class="confirmation"></p>
           <p class="name"></p>
-         </div> 
+          <p class="stylist_name"></p>
+          <button id="accept">Accept</button>
+          <button id="ignore">Decline</button>
+        </div> 
 
   <script>
     $(document).ready(function() {
@@ -103,7 +106,6 @@
             center: 'title',
             right: 'month,agendaWeek,agendaDay'
           },
-          // defaultDate: '2015-11-11', // need to add a now/today's date 
           editable: true,
           eventLimit: true, 
           events: resp,
@@ -112,7 +114,8 @@
             $("#appointmentTitle").text(calEvent.title);
             $(".appointmentTime").text(calEvent.start);
             $(".confirmation").text(calEvent.confirmation);
-            $(".name").text(calEvent.first_name + " " + calEvent.last_name);
+            // $(".name").text(calEvent.first_name + " " + calEvent.last_name);
+            $(".stylist_name").text(calEvent.stylist_firstName + " " + calEvent.stylist_lastName);
 
             console.log(calEvent.title);
             console.log(calEvent.confirmation);
@@ -125,11 +128,31 @@
     $(".closeButton").on('click', function(){
       $("#appointmentInfo").css("display", "none");
     });
-    // make a div, append a button , accept or decline
-    // in appoinment.php store appointment.id so when I click on the event 2 buttons show up; if accept, update appoinment info (hairstylist etc) WHERE id = appointment_id, hairStylist_id = $_Session['id']. When I make the buttons, I can make the accept button id = appointment_id so when I do an AJAX id
-    // data: {appointent.id: button.id}
-    //if the hairStylist id matches the appoinment hairStylist id, change the colour to green; or else it'll be 
-    
+
+    $("#acceptStylist").click(function(event) {
+        event.preventDefault();
+
+        $.ajax({
+          url:"php/acceptStylist.php",
+          dataType:"json",
+          type:"POST",
+          data:{
+            appointment_id: current_id,
+            hairStylist_id: 2
+          },
+
+          success: function(resp2){
+            document.location.href="customer_calendar.html"; 
+          },
+
+          error: function(XMLHttpRequest, textStatus, errorThrown) { 
+              console.log("Status: " + textStatus); 
+              console.log("Error: " + errorThrown);
+              console.log(XMLHttpRequest); 
+          }
+        });
+      });
+   
   });
 
     </script>   
