@@ -257,7 +257,7 @@
   color: gray;
 }
 
-.fbLoginBut {
+#fbLoginBut {
   width: 60%;
   display: block;
   margin: auto;
@@ -811,7 +811,7 @@ pre {
   margin-bottom: 4%;
 }
 
-.fbLoginBut {
+#fbLoginBut {
   width: 35%;
   display: block;
   margin: auto;
