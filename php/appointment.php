@@ -1,11 +1,14 @@
 <?php
 	include("connection.php");
 
-	$query = "SELECT customer.customer_firstName, customer.customer_lastName, appointment.customer_dateTime, appointment_service.cut_type, appointment_service.color_type, appointment_service.styling_type, appointment.hairStylist_id, appointment.id, hairStylist.hairStylist_firstName, hairStylist.hairStylist_lastName FROM appointment
+	$query = "SELECT customer.customer_firstName, customer.customer_lastName, appointment.customer_dateTime, appointment_service.cut_type, 
+		appointment_service.color_type, appointment_service.styling_type, appointment.hairStylist_id, 
+		appointment.id, hairStylist.hairStylist_firstName, hairStylist.hairStylist_lastName, appointment.appointment_status FROM appointment
 		INNER JOIN appointment_service ON appointment_service.ID = appointment.appointment_service_id
-		INNER JOIN customer ON customer.id = appointment.customer_id AND appointment.customer_id = 2
-		INNER JOIN hairstylist ON hairStylist.id = appointment.hairStylist_id";
-		// remove hard coded appointment.customer_id = 2 and appointment.hairStylist_id = 2
+		INNER JOIN customer ON customer.ID = appointment.customer_id AND appointment.customer_id = $_SESSION['id']
+		INNER JOIN hairstylist ON hairStylist.ID = appointment.hairStylist_id WHERE appointment.appointment_status NOT = ''";
+	
+//echo $query;
 
 	$result = mysqli_query($connect, $query);
 
@@ -42,8 +45,11 @@
 			if($row['hairStylist_id']){
 				$color='#00a0b0';
 				$confirmation = "Booked appointment";
-
+				//$row['appointment_status'] == 1;
 			}
+			// if($row['appointment_status'] == 1){
+			// 	;
+			// }
 
 			$obj = array(
 				"id"=>$row['id'],
@@ -56,9 +62,9 @@
 				"last_name"=>$row['customer_lastName'],
 				// "stylist_firstname"=>$row['stylist_firstName'],
 				// "stylist_lastname"=>$row['stylist_lastName'],
+				"appointment_status"=>$row['appointment_status']
 			);
 			array_push($arr, $obj);
-
 		}
 		echo json_encode($arr);
 	}

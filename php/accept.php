@@ -14,7 +14,7 @@
     // $appointmentSql = "INSERT INTO appointment (hairStylist_id) VALUES (" . $_POST['hairStylist_id'] . ")";
 
 
-    $appointmentSql = "UPDATE appointment SET hairStylist_id=2 WHERE id=(" . $_POST['appointment_id'] . ")";
+    $appointmentSql = "UPDATE appointment SET hairStylist_id=2, appointment_status = 1 WHERE id=(" . $_POST['appointment_id'] . ") ";
 
 
    // echo $appointmentSql;
