@@ -161,16 +161,18 @@
     
 .signup3 {
   background-color: white;
-  width: 105vw;
+  width: 100vw;
   margin-left: -5%;
+  margin-right: -10%;
   padding-left: 2%;
   border-top:none;
 }
 
 .signup4 {
   background-color: white;
-  width: 105vw;
+  width: 100vw;
   margin-left: -5%;
+  margin-right: -10%;
   padding-left: 2%;
 }
 
@@ -672,7 +674,8 @@ pre {
 
 .footrowStyle {
   background-color: #D5CFE1;
-  margin-left: 20%;
+  margin-left: 16%;
+  margin-top: -0.5%;
   padding: 0%;
 }
 
@@ -772,7 +775,7 @@ pre {
 .signup3 {
   background-color: white;
   border-top: 1px gray solid;
-  width: 99.2vw;
+  width: 99vw;
   margin-left: -6%;
   padding-left: 2%;
   border:none;
@@ -787,7 +790,7 @@ pre {
 
 .signup4 {
   background-color: white;
-  width: 99.2vw;
+  width: 99vw;
   margin-left: -6%;
   padding-left: 2%;
 }
