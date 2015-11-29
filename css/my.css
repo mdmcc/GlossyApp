@@ -322,6 +322,14 @@
   padding: 0%;
 }
 
+.footrowStyle {
+  background-color: #D5CFE1;
+  margin-right: -15%;
+  margin-top: 2%;
+  margin-left: 11%;
+  padding: 0%;
+}
+
 .lightgrey{
   
   background-color: rgb(230, 230, 230);
@@ -666,7 +674,14 @@ pre {
   background-color: #D5CFE1;
   margin-left: 20%;
   padding: 0%;
+}
 
+.current {
+  background-color: #B7E4F6;
+}
+
+.current:hover {
+  background-color: #B7E4F6;
 }
 
   #profilehead {
@@ -812,9 +827,10 @@ pre {
 }
 
 #fbLoginBut {
-  width: 35%;
+  width: 33%;
   display: block;
   margin: auto;
+  position: absolute;
   background-color: transparent;
   border: none;
   margin-bottom: 2%;
