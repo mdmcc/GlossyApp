@@ -1,30 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-B">
-  <title>Customer Calender</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/my.css"/>
-  <link href='css/calendar.css' rel='stylesheet' />
-  <link href='css/fullcalendar.css' rel='stylesheet' />
-  <link href='css/fullcalendar.min.css' rel='stylesheet' />
-  <script type="text/javascript" src="js/script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src='js/moment.min.js'></script>
-  <script src='js/jquery.min.js'></script>
-  <script src='js/jquery-ui.custom.min.js'></script>
-  <script src='js/fullcalendar.min.js'></script>
-  <script src='js/fullcalendar.js'></script>
-  <script src="js/bootstrap.js" ></script>
-  <script src="js/npm.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <meta charset="UTF-B">
+    <title>Customer Calender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/my.css"/>
+    <link href='css/calendar.css' rel='stylesheet' />
+    <link href='css/fullcalendar.css' rel='stylesheet' />
+    <link href='css/fullcalendar.min.css' rel='stylesheet' />
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src='js/moment.min.js'></script>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/jquery-ui.custom.min.js'></script>
+    <script src='js/fullcalendar.min.js'></script>
+    <script src='js/fullcalendar.js'></script>
+    <script src="js/bootstrap.js" ></script>
+    <script src="js/npm.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 </head>
 <body>
 
-    <div class="container">
+  <div class="container">
     
       <div class="row">
         <div class="col-xs-12 logo">
@@ -49,41 +49,42 @@
           <p class="confirmation"></p>
          <!--  <p class="name"></p> -->
           <p class="stylist_name"></p>
-          <button id="accept">Accept</button>
+          <button id="acceptStylist">Accept</button>
           <button id="decline">Decline</button>
         </div> 
+      </div>
 
-  <script>
-    $(document).ready(function() {
-    
-    $.ajax({
-      url:"php/appointment.php",
-      dataType:"json",
-      success:function(resp){
-        console.log(resp);
-        $('#calendar').fullCalendar({
-          header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,agendaWeek,agendaDay'
-          },
-          editable: true,
-          eventLimit: true, 
-          events: resp,
-          eventClick: function(calEvent, jsEvent, view){
-            $("#appointmentInfo").css("display", "block");
-            $("#appointmentTitle").text(calEvent.title);
-            $(".appointmentTime").text(calEvent.start);
-            $(".confirmation").text(calEvent.confirmation);
-            // $(".name").text(calEvent.first_name + " " + calEvent.last_name);
-            $(".stylist_name").text(calEvent.stylist_firstName + " " + calEvent.stylist_lastName);
+    <script>
+      $(document).ready(function() {
+      
+        $.ajax({
+          url:"php/appointment.php",
+          dataType:"json",
+          success:function(resp){
+            console.log(resp);
+            $('#calendar').fullCalendar({
+              header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+              },
+              editable: true,
+              eventLimit: true, 
+              events: resp,
+              eventClick: function(calEvent, jsEvent, view){
+                $("#appointmentInfo").css("display", "block");
+                $("#appointmentTitle").text(calEvent.title);
+                $(".appointmentTime").text(calEvent.start);
+                $(".confirmation").text(calEvent.confirmation);
+                // $(".name").text(calEvent.first_name + " " + calEvent.last_name);
+                $(".stylist_name").text(calEvent.stylist_firstName + " " + calEvent.stylist_lastName);
 
-            console.log(calEvent.title);
-            console.log(calEvent.confirmation);
+                console.log(calEvent.title);
+                console.log(calEvent.confirmation);
+              }
+            });
           }
-        });
-      }
-    })
+        })
 
 
     $(".closeButton").on('click', function(){
@@ -113,11 +114,9 @@
           }
         });
       });
-   
   });
 
     </script>   
-      </div>
 
   <hr>
                 
@@ -138,5 +137,6 @@
         </div>
       </nav>
     </div>
+  </div>
 </body>
 </html>

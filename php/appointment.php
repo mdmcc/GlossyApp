@@ -1,23 +1,26 @@
 <?php
 	include("connection.php");
+	include("sessions.php");
 
 	$query = "SELECT customer.customer_firstName, customer.customer_lastName, appointment.customer_dateTime, appointment_service.cut_type, 
 		appointment_service.color_type, appointment_service.styling_type, appointment.hairStylist_id, 
-		appointment.id, hairStylist.hairStylist_firstName, hairStylist.hairStylist_lastName, appointment.appointment_status FROM appointment
-		INNER JOIN appointment_service ON appointment_service.ID = appointment.appointment_service_id
-		INNER JOIN customer ON customer.ID = appointment.customer_id AND appointment.customer_id = $_SESSION['id']
-		INNER JOIN hairstylist ON hairStylist.ID = appointment.hairStylist_id WHERE appointment.appointment_status NOT = ''";
+		appointment.ID, hairStylist.hairStylist_firstName, hairStylist.hairStylist_lastName, appointment.appointment_status FROM appointment
+		INNER JOIN appointment_service ON appointment_service.ID = appointment.appointment_service_id 
+		INNER JOIN customer ON customer.ID = appointment.customer_id
+		LEFT JOIN hairStylist ON hairStylist.ID = appointment.hairStylist_id WHERE appointment.appointment_status != '2'
+		AND appointment.customer_id = ".$_SESSION["id"]."";
+		// is not "cancelled"
 	
 //echo $query;
 
-	$result = mysqli_query($connect, $query);
+	$results = mysqli_query($connect, $query);
 
 //var_dump($result);
 
 	if($result){
 		$arr = array();
 		// $show = true;
-		while($row = mysqli_fetch_array($result)){
+		while($row = mysqli_fetch_array($results)){
 			// if($show) {
 			// 	var_dump($row);
 			// 	$show = false;
@@ -52,10 +55,10 @@
 			// }
 
 			$obj = array(
-				"id"=>$row['id'],
+				"id"=>$row['ID'],
 				"title"=>$str,
 				"start"=>$row['customer_dateTime'],
-				"end"=>$row['customer_dateTime'],
+				"end"=>$row['customer_dateTime'], 
 				"confirmation"=>$confirmation,
 				"backgroundColor"=>$color,
 				"first_name"=>$row['customer_firstName'],

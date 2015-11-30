@@ -6,6 +6,10 @@
     // exit();
     }
 
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
     // $appointmentServiceSql = "INSERT INTO appointment_service (cut_type, color_type, styling_type) VALUES (" . $_POST['cut_type'] . ", " . $_POST['color_type'] . ", " . $_POST['styling_type'] . ")";
     // $appointmentServiceResults = mysqli_query ($connect, $appointmentServiceSql);
     // $insertAppointmentInsertId = mysqli_insert_id($connect);
@@ -14,7 +18,7 @@
     // $appointmentSql = "INSERT INTO appointment (hairStylist_id) VALUES (" . $_POST['hairStylist_id'] . ")";
 
 
-    $appointmentSql = "UPDATE appointment SET hairStylist_id=2 WHERE id=(" . $_POST['appointment_id'] . ") AND appointment_status WHERE id=" .appointment_status."";
+    $appointmentSql = "UPDATE appointment SET hairStylist_id = 2 WHERE id = (" . $_POST['appointment_id'] . ") AND appointment_status WHERE id=" .appointment_status."";
 
 
    // echo $appointmentSql;

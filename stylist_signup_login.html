@@ -70,21 +70,17 @@
           <div class="col-xs-4 login2">Confirm:</div>
            <input class="col-xs-8 loginbox2" type="password" name="confirmPassword" placeholder="Confirm password">
         </div>
-  
-        <div class="row" id="errormsg">
-        <p class="col-xs-12 who" id="signerror"></p>
-        </div>
+ 
                   
       <div class="row logbut">
         <a href="stylist_calendar.html">
           <button type="button" id = "next" class="col-xs-12 btn btn-success">Next</button>
-
-          <button type="button" id="signback" class="col-xs-12 btn btn-default">Back</button>
         </a>
       </div>
+      <hr>
            </fieldset>
         </form>
-        <hr>
+
        <div class="row">
            <div class="col-xs-12 alreadyUser">
               Already a user?
@@ -92,16 +88,14 @@
         </div>
         <form name="stylist_login" method='post' action='./php/login_stylist.php'>
             <fieldset>
-        <div class="row signup5">
-            <div class="col-xs-3 signin">Log in:</div>
+        <div class="row signup3">
+            <div class="col-xs-3 login2">Log in:</div>
            <input class="col-xs-9 loginbox2" type="text" name="email" placeholder="Email"/> 
            <input class="col-xs-9 loginbox" type="text" name="password" placeholder="Password"/> 
         </div>
         
          <div class="row logbut">
-            <a href="stylist_calendar.html"> 
-              <button type="button" class="col-xs-12 btn btn-success">Submit</button>
-            </a>
+              <button type="submit" class="col-xs-12 btn btn-success">Submit</button>
           </div>
             </fieldset>
         </form>

@@ -1,12 +1,8 @@
 <?php
-session_start();
 
-// if(isset($_SESSION['pagenum'])){
-// 	$_SESSION['pagenum']++;	
-// } else {
-// 	$_SESSION['pagenum'] = 0;
-// }
-
+if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+}
 
 // if(isset($_SESSION['login'])){
 // 	if($_SESSION['login'] == false){
