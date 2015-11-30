@@ -103,15 +103,6 @@
   /*background-color: rgb(255, 255, 255);*/
 }
 
-.servicesBox {
-  height: 35px;
-  width: 50%;
-  font-size: 12pt;
-  margin-left: -10%;
-  margin-top: 7%;
-  border:none;
-}
-
 .login2 {
   width: 40%;
   font-size: 10pt;
@@ -161,16 +152,18 @@
     
 .signup3 {
   background-color: white;
-  width: 105vw;
+  width: 100vw;
   margin-left: -5%;
+  margin-right: -10%;
   padding-left: 2%;
   border-top:none;
 }
 
 .signup4 {
   background-color: white;
-  width: 105vw;
+  width: 100vw;
   margin-left: -5%;
+  margin-right: -10%;
   padding-left: 2%;
 }
 
@@ -322,6 +315,14 @@
   padding: 0%;
 }
 
+.footrowStyle {
+  background-color: #D5CFE1;
+  margin-right: -15%;
+  margin-top: 2%;
+  margin-left: 11%;
+  padding: 0%;
+}
+
 .lightgrey{
   
   background-color: rgb(230, 230, 230);
@@ -450,6 +451,10 @@
   margin-left: 1%;
   margin-top: 3%;
   font-size: 18pt;
+}
+
+option {
+  font-size: 8pt;
 }
 
 .login2 {
@@ -612,8 +617,8 @@ pre {
 }
 
 .indexlogo {
-  height: 350px;
-  width: 350px;
+  height: 325px;
+  width: 325px;
   margin-top: 1%;
   margin-bottom: -5%;
   display: block;
@@ -664,9 +669,17 @@ pre {
 
 .footrowStyle {
   background-color: #D5CFE1;
-  margin-left: 20%;
+  margin-left: 16%;
+  margin-top: -0.5%;
   padding: 0%;
+}
 
+.current {
+  background-color: #B7E4F6;
+}
+
+.current:hover {
+  background-color: #B7E4F6;
 }
 
   #profilehead {
@@ -696,6 +709,14 @@ pre {
   margin-bottom: 1%;
   margin-left: 5%;
 
+}
+
+.login3 {
+  width: 65%;
+  height: 45px;
+  margin-left: 1%;
+  margin-top: 2%;
+  font-size: 18pt;
 }
 
 .loginbox {
@@ -757,7 +778,7 @@ pre {
 .signup3 {
   background-color: white;
   border-top: 1px gray solid;
-  width: 99.2vw;
+  width: 99vw;
   margin-left: -6%;
   padding-left: 2%;
   border:none;
@@ -772,7 +793,7 @@ pre {
 
 .signup4 {
   background-color: white;
-  width: 99.2vw;
+  width: 99vw;
   margin-left: -6%;
   padding-left: 2%;
 }
@@ -789,7 +810,8 @@ pre {
   width: 99.2vw;
   margin-left: -6%;
   padding-left: 5%;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
+  padding-top: -8%;
 }
 
 .appselect2 {
@@ -798,7 +820,20 @@ pre {
   width: 99.2vw;
   margin-left: -6%;
   padding-left: 5%;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
+  padding-top: -8%;
+}
+
+.servicesBox {
+  height: 50px;
+  width: 18%;
+  font-size: 20pt;
+  margin-left: 3%;
+  margin-top: 2%;
+}
+
+option {
+  font-size: 15pt;
 }
     
 .logbut {
@@ -812,9 +847,10 @@ pre {
 }
 
 #fbLoginBut {
-  width: 35%;
+  width: 33%;
   display: block;
   margin: auto;
+  position: absolute;
   background-color: transparent;
   border: none;
   margin-bottom: 2%;
