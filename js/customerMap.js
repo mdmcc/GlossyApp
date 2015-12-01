@@ -84,6 +84,7 @@ markers.forEach(function(marker) {
       }
     });
     map.fitBounds(bounds);
+    map.setZoom(10);
   });
   // [END region_getplaces]
 
