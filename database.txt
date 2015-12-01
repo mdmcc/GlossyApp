@@ -25,6 +25,7 @@ CREATE TABLE appointment (
   customer_dateTime date NOT NULL,
   customer_lng VARCHAR(50) NOT NULL,
   customer_lat VARCHAR(50) NOT NULL,
+  customer_address VARCHAR(200),
   hairStylist_id int, 
   appointment_status int,
   -- 0 = active, 1 = inactive, 2 = completed

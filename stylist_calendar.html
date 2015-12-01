@@ -54,6 +54,7 @@
           <div class="closeButton">Close</div>
           <h4 id='appointmentTitle'></h4>
           <p class="appointmentTime"></p>
+           <p class="customerAddress"></p>
           <p class="confirmation"></p>
           <p class="name"></p>
           <!-- <p class="stylist_name"></p> -->
@@ -67,7 +68,7 @@
     var current_id = 0;
     
     $.ajax({
-      url:"php/appointment.php",
+      url:"php/stylist_appointment.php",
       dataType:"json",
       success:function(resp){
         console.log(resp);
@@ -83,15 +84,25 @@
           eventClick: function(calEvent, jsEvent, view){
             $("#appointmentInfo").css("display", "block");
             $("#appointmentTitle").text(calEvent.title);
-            $(".appointmentTime").text(calEvent.start);
+            $(".appointmentTime").text(moment(calEvent.start).format("dddd, MMMM Do YYYY, h:mm a") + " - " + moment(calEvent.start).add(1.5, 'h').format("h:mm a"));
             $(".confirmation").text(calEvent.confirmation);
-            $(".name").text(calEvent.first_name + " " + calEvent.last_name);
+            $(".customerAddress").text(calEvent.customerAddress);
+            $(".name").text("Customer: " +calEvent.first_name + " " + calEvent.last_name);
+            if(calEvent.confirmation === "Booked appointment") {
+              $("#accept").css("display", "none");
+              $("#ignore").css("display", "none");
+            }
             // $(".stylist_name").text(calEvent.stylist_firstName + " " + calEvent.stylist_lastName);
             current_id = calEvent.id;
             console.log("ID:" + calEvent.id);
             console.log(calEvent.confirmation);
           }
         });
+      },
+      error: function(XMLHttpRequest, textStatus, errorThrown) { 
+          console.log("Status: " + textStatus); 
+          console.log("Error: " + errorThrown);
+          console.log(XMLHttpRequest); 
       }
     });
 
@@ -108,12 +119,11 @@
           dataType:"json",
           type:"POST",
           data:{
-            appointment_id: current_id,
-            hairStylist_id: 2
+            appointment_id: current_id
           },
 
           success: function(resp2){
-            document.location.href="stylist_calendar.html"; // don't want it to actually refresh the page; change 
+            document.location.href="stylist_calendar.html"; 
           },
 
           error: function(XMLHttpRequest, textStatus, errorThrown) { 
@@ -135,7 +145,7 @@
           <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/profile.gif" id = "buttonimg1"/></button>
         </a>
         <a href="stylist_calendar.html">
-          <button type="button" class="btn btn-default current" id = "footerbut"><img src = "./assets/calendartrans.gif" id = "buttonimg3"/></button>
+          <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/calendartrans.gif" id = "buttonimg3"/></button>
         </a>
         <a href="about_stylist.html">
           <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/info.gif" id = "buttonimg4"></button>

@@ -5,9 +5,7 @@ include("sessions.php");
 if(mysqli_connect_errno()){
         echo "Something went wrong connecting... " . mysqli_connect_error();
     // exit();
- }
-
-	
+}
 
 $userSQL = "SELECT * FROM customer WHERE customer_email = '".$_POST['email']."' AND customer_password = '". $_POST['password'] ."'";
 

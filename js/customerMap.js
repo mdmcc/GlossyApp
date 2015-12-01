@@ -1,5 +1,6 @@
 var lat = "";
 var lng = "";
+var address = "";
 
 
 // map2 for customers 
@@ -49,7 +50,7 @@ markers.forEach(function(marker) {
       marker.setMap(null);
     });
     markers = [];
-    console.log(places);
+    console.log(places[0].formatted_address);
 
     // For each place, get the icon, name and location.
     var bounds = new google.maps.LatLngBounds();
@@ -62,7 +63,7 @@ markers.forEach(function(marker) {
         scaledSize: new google.maps.Size(25, 25)
       };
         //this is giving the information of latlng of searched item
-console.log(bounds);
+//console.log(bounds);
       // Create a marker for each place.
       markers.push(new google.maps.Marker({
         map: map,
@@ -72,6 +73,7 @@ console.log(bounds);
       }));
       lat = place.geometry.location.lat();
       lng = place.geometry.location.lng();
+      address = places[0].formatted_address;
       //console.log(place.geometry);
 
       if (place.geometry.viewport) {

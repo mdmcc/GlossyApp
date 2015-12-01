@@ -53,7 +53,7 @@
             <option value='2'>Premium: Complex hair cuts including many layers - $90</option>
           </select>  
       </div>
-
+            
       <div class="row appselect2">
         <div class="col-xs-4 servicesBox">Colour:</div>
           <select class="col-xs-8 login3" id="color" name="color">
@@ -88,7 +88,6 @@
           Pick the location where you would like the appointment to be held
         </div>
       </div>
-      <br/>
 
       <div class="col-xs-12">
         <input id="pacinput" class="controls" type="text" placeholder="Search Google Maps">
@@ -116,7 +115,7 @@
             <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/profile.gif" id = "buttonimg1"/></button>
           </a>
           <a href="customer_appointment.html">
-            <button type="button" class="btn btn-default current" id = "footerbut"><img src = "./assets/blowdryer.gif" id = "buttonimg2"></button>
+            <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/blowdryer.gif" id = "buttonimg2"></button>
           </a>
           <a href="customer_calendar.html">
             <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/calendartrans.gif" id = "buttonimg3"/></button>
@@ -167,20 +166,22 @@
           dataType:"json",
           type:"POST",
           data:{
-            customer_id: 2,
-            appointment_service_id: 1, 
+            // appointment_service_id: 1, 
             cut_type: $('#cut').find(":selected").val(), // can these stay here, or do they have to be moved?
             color_type: $('#color').find(":selected").val(), 
             styling_type: $('#styling').find(":selected").val(), 
             customer_dateTime: $('input[name="appointment"]').val(),
             customer_lat: lat,
             customer_lng: lng,
+            customer_address: address,
             hairStylist_id: "NULL"
           },
 
           success: function(resp){
             document.location.href="customer_calendar.html"; 
+            console.log(address);
           },
+
 
           error: function(XMLHttpRequest, textStatus, errorThrown) { 
               console.log("Status: " + textStatus); 

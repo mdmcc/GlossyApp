@@ -7,9 +7,8 @@
 		appointment.ID, hairStylist.hairStylist_firstName, hairStylist.hairStylist_lastName, appointment.appointment_status FROM appointment
 		INNER JOIN appointment_service ON appointment_service.ID = appointment.appointment_service_id 
 		INNER JOIN customer ON customer.ID = appointment.customer_id
-		LEFT JOIN hairStylist ON hairStylist.ID = appointment.hairStylist_id WHERE appointment.appointment_status != '2' 
-		AND appointment.customer_id = ".$_SESSION['id']."";
-		
+		LEFT JOIN hairStylist ON hairStylist.ID = appointment.hairStylist_id WHERE appointment.appointment_status != '2'";
+		// is not "cancelled"
 	
 //echo $query;
 

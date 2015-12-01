@@ -1,6 +1,6 @@
 <?php
     include("connection.php");
-    include("sessions");
+    include("sessions.php");
 
     if(mysqli_connect_errno()){
         echo "Something went wrong connecting... " . mysqli_connect_error();
@@ -15,7 +15,7 @@
     // $appointmentSql = "INSERT INTO appointment (hairStylist_id) VALUES (" . $_POST['hairStylist_id'] . ")";
 
 
-    $appointmentSql = "UPDATE appointment SET hairStylist_id = 2, appointment_status = 1 WHERE id=(" . $_POST['appointment_id'] . ") ";
+    $appointmentSql = "UPDATE appointment SET hairStylist_id = (".$_SESSION['id']."), appointment_status = 1 WHERE id=(" . $_POST['appointment_id'] . ") ";
 
 
    // echo $appointmentSql;

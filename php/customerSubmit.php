@@ -12,8 +12,8 @@
     $insertAppointmentInsertId = mysqli_insert_id($connect);
 
     
-    $appointmentSql = "INSERT INTO appointment (customer_id, appointment_service_id, customer_dateTime, customer_lng, customer_lat, hairStylist_id, appointment_status) VALUES (" . $_SESSION['id'] . ", " . $insertAppointmentInsertId  . ", '" . $_POST['customer_dateTime'] . "', " . $_POST['customer_lng'] . ", " . $_POST['customer_lat'] . ", " . $_POST['hairStylist_id'] . ", 0)";
-   // echo $appointmentSql;
+    $appointmentSql = "INSERT INTO appointment (customer_id, appointment_service_id, customer_dateTime, customer_lng, customer_lat, customer_address, hairStylist_id, appointment_status) VALUES (" . $_SESSION['id'] . ", " . $insertAppointmentInsertId  . ", '" . $_POST['customer_dateTime'] . "', " . $_POST['customer_lng'] . ", " . $_POST['customer_lat'] . ", '" . $_POST['customer_address'] . "', " . $_POST['hairStylist_id'] . ", 0)";
+    //echo $appointmentSql;
 
     $results = mysqli_query ($connect, $appointmentSql);
     

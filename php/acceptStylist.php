@@ -1,13 +1,10 @@
 <?php
     include("connection.php");
+    include("sessions.php");
 
     if(mysqli_connect_errno()){
         echo "Something went wrong connecting... " . mysqli_connect_error();
     // exit();
-    }
-
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
     }
 
     // $appointmentServiceSql = "INSERT INTO appointment_service (cut_type, color_type, styling_type) VALUES (" . $_POST['cut_type'] . ", " . $_POST['color_type'] . ", " . $_POST['styling_type'] . ")";

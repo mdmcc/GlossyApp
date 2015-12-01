@@ -47,10 +47,11 @@
           <h4 id='appointmentTitle'></h4>
           <p class="appointmentTime"></p>
           <p class="confirmation"></p>
+          <p class="customerAddress"></p>
          <!--  <p class="name"></p> -->
           <p class="stylist_name"></p>
-          <button id="acceptStylist">Accept</button>
-          <button id="decline">Decline</button>
+         <!--  <button id="acceptStylist">Accept</button>
+          <button id="decline">Decline</button> -->
         </div> 
       </div>
 
@@ -61,7 +62,7 @@
           url:"php/appointment.php",
           dataType:"json",
           success:function(resp){
-            console.log(resp);
+            console.log("test:" + resp);
             $('#calendar').fullCalendar({
               header: {
                 left: 'prev,next today',
@@ -74,15 +75,25 @@
               eventClick: function(calEvent, jsEvent, view){
                 $("#appointmentInfo").css("display", "block");
                 $("#appointmentTitle").text(calEvent.title);
-                $(".appointmentTime").text(calEvent.start);
+                $(".appointmentTime").text(moment(calEvent.start).format("dddd, MMMM Do YYYY, h:mm a") + " - " + moment(calEvent.start).add(1.5, 'h').format("h:mm a"));
                 $(".confirmation").text(calEvent.confirmation);
+                $(".customerAddress").text(calEvent.customerAddress);
                 // $(".name").text(calEvent.first_name + " " + calEvent.last_name);
-                $(".stylist_name").text(calEvent.stylist_firstName + " " + calEvent.stylist_lastName);
-
+                $(".stylist_name").text(calEvent.stylist_firstname + " " + calEvent.stylist_lastname);
+                if(calEvent.confirmation === "Tentative appointment"){
+                  $(".stylist_name").css("display", "none");
+                } else {
+                  $(".stylist_name").css("display", "block");
+                }
                 console.log(calEvent.title);
                 console.log(calEvent.confirmation);
               }
             });
+          },
+          error: function(XMLHttpRequest, textStatus, errorThrown) { 
+              console.log("Status: " + textStatus); 
+              console.log("Error: " + errorThrown);
+              console.log(XMLHttpRequest); 
           }
         })
 
@@ -91,29 +102,29 @@
       $("#appointmentInfo").css("display", "none");
     });
 
-    $("#acceptStylist").click(function(event) {
-        event.preventDefault();
+    // $("#acceptStylist").click(function(event) {
+    //     event.preventDefault();
 
-        $.ajax({
-          url:"php/acceptStylist.php",
-          dataType:"json",
-          type:"POST",
-          data:{
-            appointment_id: current_id,
-            hairStylist_id: 2
-          },
+    //     $.ajax({
+    //       url:"php/acceptStylist.php",
+    //       dataType:"json",
+    //       type:"POST",
+    //       data:{
+    //         appointment_id: current_id,
+    //         hairStylist_id: 2
+    //       },
 
-          success: function(resp2){
-            document.location.href="stylist_calendar.html"; 
-          },
+    //       success: function(resp2){
+    //         document.location.href="stylist_calendar.html"; 
+    //       },
 
-          error: function(XMLHttpRequest, textStatus, errorThrown) { 
-              console.log("Status: " + textStatus); 
-              console.log("Error: " + errorThrown);
-              console.log(XMLHttpRequest); 
-          }
-        });
-      });
+    //       error: function(XMLHttpRequest, textStatus, errorThrown) { 
+    //           console.log("Status: " + textStatus); 
+    //           console.log("Error: " + errorThrown);
+    //           console.log(XMLHttpRequest); 
+    //       }
+    //     });
+    //   });
   });
 
     </script>   
@@ -129,7 +140,7 @@
             <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/blowdryer.gif" id = "buttonimg2"></button>
           </a>
           <a href="customer_calendar.html">
-            <button type="button" class="btn btn-default current" id = "footerbut"><img src = "./assets/calendartrans.gif" id = "buttonimg3"/></button>
+            <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/calendartrans.gif" id = "buttonimg3"/></button>
           </a>
           <a href="about.html">
             <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/info.gif" id = "buttonimg4"></button>
