@@ -2,7 +2,7 @@
 include("connection.php");
 include("sessions.php");
 
-$user_info = "INSERT INTO hairStylist (hairStylist_email, hairStylist_password, hairStylist_firstName, hairStylist_lastName) VALUES ('".$_POST['email']."', '".$_POST['password']."', '".$_POST['firstname']."', '".$_POST['lastname']."')";  
+$user_info = "INSERT INTO hairStylist (hairStylist_email, hairStylist_password, hairStylist_firstName, hairStylist_lastName, fb_id) VALUES ('".$_POST['email']."', '".$_POST['password']."', '".$_POST['firstname']."', '".$_POST['lastname']."', '".$_POST['lastname']."')";  
 
 $results = mysqli_query($connect, $user_info);
 // if($results)
