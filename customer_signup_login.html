@@ -128,7 +128,9 @@
 						},
 						success: function(resp) {
 							if (resp != "success") {
-								alert(resp);
+									var etxt = "Your username or password does not match our records. Please try again";
+								var emsg = document.getElementById("logerror").innerHTML = etxt;
+								
 							} else {
 								location.href="customer_appointment.html";
 							}
