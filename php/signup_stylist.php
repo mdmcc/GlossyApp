@@ -10,6 +10,6 @@ $_SESSION['login'] = true;
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['id'] = mysqli_insert_id($connect);
 //{echo "Your information was added to the database.";}
-header("Location:/GlossyApp/stylist_calendar.html");
+header("Location:/GlossyApp/customer_signup_login.html?error");
 
 ?> 

@@ -10,5 +10,5 @@ $_SESSION['login'] = true;
 $_SESSION['email'] = $_POST['email'];
 $_SESSION['id'] = mysqli_insert_id($connect);
 
-header("Location:/GlossyApp/customer_appointment.html");
+header("Location:/GlossyApp/customer_signup_login.html?error");
 ?>  

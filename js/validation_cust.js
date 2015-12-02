@@ -9,6 +9,7 @@
 document.cust_signup.onsubmit = function signupval() {
 		//var isValid = passwrdConfirm() && input_fn() && input_ln() && input_email() && input_pass() && input_pass2();
 		if ((passwrdConfirm() === true) && (input_fn() === true) && (input_ln() === true) && (input_email() === true) && (input_pass() === true)) {
+			document.getElementById("success").innerHTML = "Congratulations! You have signed up for Glossy! Now log in below";
 			return true;
 		}else {
 		return false;

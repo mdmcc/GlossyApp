@@ -12,6 +12,16 @@
     <script src="js/bootstrap.js" ></script>
 	<script src="js/script.js"></script>
  	 <script src="js/customerFB_api.js" ></script>
+     <script>
+	$(document).ready(function(e) {
+        
+		console.log(location.search);
+		if (location.search == "?error"){
+			document.getElementById("success").innerHTML = "You have successfully signed up! Please log in below";
+			//alert("Do something");
+		}
+	});
+	</script>
 
 </head>
 <body>
@@ -70,6 +80,7 @@
         
         <div class="row" id="errormsg">
         <p class="col-xs-12 who" id="signerror"></p>
+        <p class="col-xs-12 who" id="success"></p>
         </div>
           
         <div class="row logbut">
