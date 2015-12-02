@@ -18,7 +18,7 @@ if($result){
 	$_SESSION['email'] = $_POST['email'];
 	echo json_encode("success");
 	} else {
-		echo json_encode("Your username or password is wrong");	
+		echo json_encode("Your username or password does not match our records. Please try again");	
 	}
 
 } else {
