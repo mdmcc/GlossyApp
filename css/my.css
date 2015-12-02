@@ -373,6 +373,11 @@
     #logerror {
 		color:#C51518;
 	}
+	
+	#success {
+		
+		color:#138110;
+	}
 
 
 @media (min-width: 700px) {
@@ -607,6 +612,11 @@ pre {
 }
     #logerror {
 		color:#C51518;
+	}
+	
+	#success {
+		
+		color:#138110;
 	}
 
 }
@@ -924,6 +934,11 @@ pre {
 }
     #logerror {
 		color:#C51518;
+	}
+	
+	#success {
+		
+		color:#138110;
 	}
     
 /*back button CSS
