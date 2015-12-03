@@ -40,7 +40,7 @@
                   //    console.log(fb_id);
                   
                   $.ajax({
-					url:"./php/signup_cust.php",
+					url:"./php/signup_stylist.php",
 					type:"post",
 					dataType:"html",
 					data: {
@@ -52,8 +52,8 @@
                         password:"password"
 					},
 					success:function(response3){
-						location.href = "customer_appointment.html"
-                        console.log(response3);
+						location.href = "/GlossyApp7/stylist_calendar.html"
+                        //console.log(response3);
 					}
 				});
               })

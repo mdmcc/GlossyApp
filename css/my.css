@@ -81,6 +81,14 @@
   height: 85%;
 }
 
+.current {
+  background-color: #B7E4F6;
+}
+
+.current:hover {
+  background-color: #B7E4F6;
+}
+
 .topbut{
 
     height: 50px;
@@ -365,6 +373,11 @@
     #logerror {
 		color:#C51518;
 	}
+	
+	#success {
+		
+		color:#138110;
+	}
 
 
 @media (min-width: 700px) {
@@ -599,6 +612,11 @@ pre {
 }
     #logerror {
 		color:#C51518;
+	}
+	
+	#success {
+		
+		color:#138110;
 	}
 
 }
@@ -916,6 +934,11 @@ pre {
 }
     #logerror {
 		color:#C51518;
+	}
+	
+	#success {
+		
+		color:#138110;
 	}
     
 /*back button CSS
