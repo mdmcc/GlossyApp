@@ -33,33 +33,34 @@
          	<hr>
         <div class="row signup4">
           <div class="col-xs-4 login2">First name:</div>
-           <input class="col-xs-8 loginbox2" type="text" id="firstname" placeholder="First name">
+           
         </div>
         
         <div class="row signup3">
-          <div class="col-xs-4 login2">Last name:</div>
-           <input class="col-xs-8 loginbox2" type="text" id="lastname" placeholder="Last name">
+          <div class="col-xs-4 login2">Last Name:</div>
+           
         </div>
         
         <div class="row signup3">
-          <div class="col-xs-4 login2" id = "oldPass">Old password:</div>
-           <input class="col-xs-8 loginbox2" type="text" id="oldPassword" placeholder="Old Password">
+          <div class="col-xs-4 login2" id = "oldPass">Email</div>
+           
         </div>
         
         <div class="row signup3">
-          <div class="col-xs-4 login2">New password:</div>
-           <input class="col-xs-8 loginbox2" type="password" id="password" placeholder="Password">
+          <div class="col-xs-4 login2">Password:</div>
+           
         </div>
         
-        <div class="row signup3">
-          <div class="col-xs-4 login2">Confirm new password:</div>
-           <input class="col-xs-8 loginbox2" type="password" id="confirmPassword" placeholder="Confirm password">
-        </div>
         	<hr>
                   
         <div class="row">
-          <button type="button" class="col-xs-12 but1 btn btn-default">Edit profile</button>
+          <button type="button" id="editbutt" class="col-xs-12 but1 btn btn-default">Edit profile</button>
         </div>
+        
+        <div class="row" >
+        <p class="col-xs-12 who" id="msg"></p>
+        </div>
+          
         <div class="row">
           <button type="button" id="logoutbut" class="col-xs-12 but1 btn btn-default">Logout</button>
         </div>
@@ -94,6 +95,18 @@
             }
         });
     </script>
+    <script>
+	window.onload = function() {
+		var editbutt = document.getElementById("editbutt");
+		editbutt.onclick = function() {
+			var msg1 = document.getElementById("msg");
+			var newtxt = "This function is not available quite yet! Check back with us at a later date.";
+			msg1.innerHTML = newtxt;
+		}
+		
+	}
+	
+	</script>
   </div>
 </body>
 </html>

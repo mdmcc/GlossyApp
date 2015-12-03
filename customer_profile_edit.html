@@ -58,6 +58,11 @@
         <div class="row">
           <button type="button" class="col-xs-12 but1 btn btn-default">Edit profile</button>
         </div>
+        
+        <div class="row" >
+        <p class="col-xs-12 who" id="msg"></p>
+        </div>
+        
          <div class="row">
           <button type="button" id="logoutbut" class="col-xs-12 but1 btn btn-default">Logout</button>
         </div>
@@ -96,6 +101,19 @@
             }
         });
     </script>
+    
+     <script>
+	window.onload = function() {
+		var editbutt = document.getElementById("editbutt");
+		editbutt.onclick = function() {
+			var msg1 = document.getElementById("msg");
+			var newtxt = "This function is not available quite yet! Check back with us at a later date.";
+			msg1.innerHTML = newtxt;
+		}
+		
+	}
+	
+	</script>
    </div>
 </body>
 </html>
