@@ -4,15 +4,12 @@
     <meta charset="UTF-B">
     <title>Customer Profile Edit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
+    <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/my.css"/>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-   
-    <script src="js/bootstrap.js" ></script>
+    <script src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-   
 </head>
 <body>
 
@@ -33,28 +30,28 @@
          
          	<hr>
         <div class="row signup4">
-          <div class="col-xs-4 login2">First name:</div>
-           <input class="col-xs-8 loginbox2" type="text" id="firstname" placeholder="First name">
+          <div class="col-xs-4 login4">First name:</div>
+           <input class="col-xs-8 loginbox4" type="text" id="firstname" placeholder="First name">
         </div>
         
         <div class="row signup3">
-          <div class="col-xs-4 login2">Last name:</div>
-           <input class="col-xs-8 loginbox2" type="text" id="lastname" placeholder="Last name">
+          <div class="col-xs-4 login4">Last name:</div>
+           <input class="col-xs-8 loginbox4" type="text" id="lastname" placeholder="Last name">
         </div>
         
         <div class="row signup3">
-          <div class="col-xs-4 login2" id = "oldPass">Old password:</div>
-           <input class="col-xs-8 loginbox2" type="text" id="oldPassword" placeholder="Old Password">
+          <div class="col-xs-4 login4" id = "oldPass">Old password:</div>
+           <input class="col-xs-8 loginbox4" type="text" id="oldPassword" placeholder="Old Password">
         </div>
         
         <div class="row signup3">
-          <div class="col-xs-4 login2">New password:</div>
-           <input class="col-xs-8 loginbox2" type="password" id="password" placeholder="New password">
+          <div class="col-xs-4 login4">New password:</div>
+           <input class="col-xs-8 loginbox4" type="password" id="password" placeholder="New password">
         </div>
         
         <div class="row signup3">
-          <div class="col-xs-4 login2">Confirm new password:</div>
-           <input class="col-xs-8 loginbox2" type="password" id="confirmPassword" placeholder="Confirm new password">
+          <div class="col-xs-4 login4">Confirm new password:</div>
+           <input class="col-xs-8 loginbox4" type="password" id="confirmPassword" placeholder="Confirm new password">
         </div>
         	<hr>
                   
@@ -69,7 +66,7 @@
        <nav> 
         <div class="footrow">
         <a href="customer_profile_edit.html">
-          <button type="button" class="btn btn-default current" id = "footerbut"><img src = "./assets/profile.gif" alt="First button" id = "buttonimg1"/></button>
+          <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/profile.gif" alt="First button" id = "buttonimg1"/></button>
         </a>
         <a href="customer_appointment.html">
           <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/blowdryer.gif" alt="Second Button" id = "buttonimg2"></button>
@@ -82,6 +79,23 @@
         </a>
       </div>
         </nav>
+
+    <script type="text/javascript">
+        $(function() {
+            $.ajax({
+                url:"php/sessions.php",
+                dataType:"json",
+                type:"POST",
+                data:{
+                    check:true
+                },
+                success:function(resp3){
+                    if(resp3 == 0){
+                    location.href="index.html";
+                }
+            }
+        });
+    </script>
    </div>
 </body>
 </html>

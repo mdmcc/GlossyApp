@@ -12,12 +12,7 @@
     <script src="js/bootstrap.js" ></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script src="js/customerFB_api.js" ></script>
-   
-    <style>
-        #fbLoginBut{
-           margin-left: 29%;
-        }
-    </style>
+
 </head>
 <body>
   <div id="fb-root"></div>
@@ -87,7 +82,7 @@
         <form name="stylist_login" method='post' action='./php/login_stylist.php'>
             <fieldset>
         <div class="row signup3">
-            <div class="col-xs-3 signin">Log in:</div>
+            <div class="col-xs-3 login2">Log in:</div>
            <input class="col-xs-9 loginbox2" type="text" name="email" placeholder="Email"/> 
            <input class="col-xs-9 loginbox" type="text" name="password" placeholder="Password"/> 
         </div>
@@ -103,7 +98,23 @@
           </div>
 
            <button id="fbLoginBut" type="submit"><img src = "./assets/facebook-login.gif" alt = "fblog" class = "fblogimg"></button>
+
+    <script type="text/javascript">
+        $(function() {
+            $.ajax({
+                url:"php/sessions.php",
+                dataType:"json",
+                type:"POST",
+                data:{
+                    check:true
+                },
+                success:function(resp3){
+                    if(resp3 == 0){
+                    location.href="index.html";
+                }
+            }
+        });
+    </script>
    </div>    
-    
 </body>
 </html>

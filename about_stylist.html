@@ -7,7 +7,6 @@
     <link rel="icon" href="./assets/logo_16colour.gif" type="image/gif" sizes="16x16">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/my.css"/>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/bootstrap.js" ></script>
     <script type="text/javascript" src="js/script.js"></script>
@@ -50,7 +49,7 @@
     <hr>
       
        <nav> 
-            <div class="footrowStyle">
+            <div class="footrow">
                 <a href="stylist_edit_profile.html">
                     <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/profile.gif" alt="First button" id = "buttonimg1"/></button>
                 </a>
@@ -58,10 +57,27 @@
                     <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/calendartrans.gif" alt="Third button" id = "buttonimg3"/></button>
                 </a>
                 <a href="about_stylist.html">
-                    <button type="button" class="btn btn-default current" id = "footerbut"><img src = "./assets/info.gif" alt="fourth button" id = "buttonimg4"></button>
+                    <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/info.gif" alt="fourth button" id = "buttonimg4"></button>
                 </a>
             </div>
         </nav>
+    <script type="text/javascript">
+        $(function() {
+            $.ajax({
+                url:"php/sessions.php",
+                dataType:"json",
+                type:"POST",
+                data:{
+                    check:true
+                },
+                success:function(resp3){
+                    if(resp3 == 0){
+                    location.href="index.html";
+                    }
+                } 
+            });
+        });
+    </script>
     </div>
 </body>
 </html>

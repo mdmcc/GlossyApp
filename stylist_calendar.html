@@ -59,13 +59,32 @@
           <p class="name"></p>
           <!-- <p class="stylist_name"></p> -->
           <button id="accept">Accept</button>
-          <button id="ignore">Ignore</button>
+         <!--  <button id="ignore">Ignore</button> -->
         </div> 
 
   <script>
     $(document).ready(function() {
 
     var current_id = 0;
+
+      $.ajax({
+          url:"php/sessions.php",
+          dataType:"json",
+          type:"POST",
+          data:{
+            check:true
+          },
+          success:function(resp3){
+            if(resp3 == 0){
+              location.href="index.html";
+            }
+
+            // } else {
+
+            //   alert("Thank you! Your appointment is tentatively booked.");
+            // }
+          }
+        });
     
     $.ajax({
       url:"php/stylist_appointment.php",
@@ -90,7 +109,10 @@
             $(".name").text("Customer: " +calEvent.first_name + " " + calEvent.last_name);
             if(calEvent.confirmation === "Booked appointment") {
               $("#accept").css("display", "none");
-              $("#ignore").css("display", "none");
+              // $("#ignore").css("display", "none");
+            } else {
+              $("#accept").css("display", "inline-block");
+              // $("#ignore").css("display", "inline-block");
             }
             // $(".stylist_name").text(calEvent.stylist_firstName + " " + calEvent.stylist_lastName);
             current_id = calEvent.id;

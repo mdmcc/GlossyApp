@@ -47,11 +47,7 @@
 			if($row['hairStylist_id']){
 				$color='#00a0b0';
 				$confirmation = "Booked appointment";
-				//$row['appointment_status'] == 1;
 			}
-			// if($row['appointment_status'] == 1){
-			// 	;
-			// }
 
 			$obj = array(
 				"id"=>$row['ID'],

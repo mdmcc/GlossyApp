@@ -68,7 +68,7 @@
     <nav> 
       <div class="footrowStyle">
         <a href="stylist_edit_profile.html">
-          <button type="button" class="btn btn-default current" id = "footerbut"><img src = "./assets/profile.gif" id = "buttonimg1"/></button>
+          <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/profile.gif" id = "buttonimg1"/></button>
         </a>
         <a href="stylist_calendar.html">
          <button type="button" class="btn btn-default" id = "footerbut"><img src = "./assets/calendartrans.gif" id = "buttonimg3"/></button>
@@ -78,6 +78,22 @@
         </a>
       </div>
     </nav>
+    <script type="text/javascript">
+        $(function() {
+            $.ajax({
+                url:"php/sessions.php",
+                dataType:"json",
+                type:"POST",
+                data:{
+                    check:true
+                },
+                success:function(resp3){
+                    if(resp3 == 0){
+                    location.href="index.html";
+                }
+            }
+        });
+    </script>
   </div>
 </body>
 </html>

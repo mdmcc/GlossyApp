@@ -7,12 +7,12 @@
      
     <link href="css/bootstrap.css" rel="stylesheet">
 	  <link rel="stylesheet" href="css/my.css"/>
-<!-- <script type="text/javascript" src="js/script.js"></script> -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/bootstrap.js" ></script>
-	<script src="js/back.js"></script>
- 	 <script src="js/customerFB_api.js" ></script>
+  <!--  <script type="text/javascript" src="js/script.js"></script> -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js" ></script>
+	
+ 	 <script src="js/customerFB_api.js" ></script>
 </head>
 <body>
    
@@ -39,7 +39,7 @@
          </div>
       </div>
          
-<form name="cust_signup" id="cust_signup" method="post" action="./php/signup_cust.php">
+    <form name="cust_signup" id="cust_signup" method="post" action="./php/signup_cust.php">
 
     <fieldset>
          <hr>
@@ -76,7 +76,7 @@
 
           <input type="submit" value="Next" id = "next_signup"  required class="col-xs-12 btn btn-success"/>
 
-          <button type="button" id="signbackk" class="col-xs-12 btn btn-default">Back</button>
+          <button type="button" id="signback" class="col-xs-12 btn btn-default">Back</button>
       </div>
         
     </fieldset>
@@ -108,6 +108,22 @@
  
     </div>  
      
-        	<script type="text/javascript" src="./js/validation_cust.js"></script>
+     <script type="text/javascript">
+        $(function() {
+            $.ajax({
+                url:"php/sessions.php",
+                dataType:"json",
+                type:"POST",
+                data:{
+                    check:true
+                },
+                success:function(resp3){
+                    if(resp3 == 0){
+                    location.href="index.html";
+                }
+            }
+        });
+    </script>
+    <script type="text/javascript" src="./js/validation_cust.js"></script>
 </body>
 </html>
