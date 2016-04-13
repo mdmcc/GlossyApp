@@ -1,11 +1,11 @@
 @media (min-width: 0px){
   #logo {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   margin-top: 5%;
 }
 
-.indexlogo {
+.indexlogo {p
   height: 250px;
   width: 250px;
   margin-top: 8%;
@@ -16,15 +16,13 @@
 }
 
 .logo{
-
-  /*  height: 150px; */
-    text-align: center;
+  /* height: 100px; */
+  text-align: center;
 }
 
 .logo2{
-	
-	text-align:center;
-	height:37.5px;
+  text-align:center;
+  height:37.5px;
 }
 
 #logo3 {
@@ -34,31 +32,28 @@
 }
 
 .who{
-    text-align: center;
-    padding-top: 15px;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .alreadyUser{
-
-   /* height: 40px;*/
-    background-color: #D5CFE1;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+  font-size: 13pt;
+  /* height: 40px;*/
+  background-color: #D5CFE1;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 
 #profilehead {
   background-color: #D5CFE1;
   font-size: 18pt;
-  /*margin-top: 2%;*/
-  /*margin-bottom: 40px;*/
 }
 
 #profilesubhead {
   background-color: #D5CFE1;
-  font-size: 11pt;
-  /*margin-top: 2%;*/
-  margin-bottom: -2%;
+  font-size: 13pt;
+  margin-bottom: 0%;
 }
 
 #buttonimg1 {
@@ -81,42 +76,37 @@
   height: 85%;
 }
 
-.topbut{
+.current {
+  background-color: #B7E4F6;
+}
 
-    height: 50px;
-	/*background-color: rgb(200, 200, 200);*/
-    text-align: center;
-    margin-top: 15px;
+.current:hover {
+  background-color: #B7E4F6;
+}
+
+.topbut{
+  height: 50px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .but1{
-
-    height: 50px;
-	/*background-color: rgb(200, 200, 200);*/
-    text-align: center;
-    margin-bottom: 3%;
+  height: 50px;
+  text-align: center;
+  margin-bottom: 3%;
 }
 
 .login {
-	width: 50%;
-  height: 74px;
-  /*background-color: rgb(255, 255, 255);*/
-}
-
-.servicesBox {
-	height: 35px;
   width: 50%;
-  font-size: 12pt;
-  margin-left: -10%;
-  margin-top: 7%;
+  height: 74px;
 }
 
 .login2 {
   width: 40%;
-  font-size: 10pt;
+  font-size: 12pt;
   display: block;
   margin-left: auto;
-  margin-top: 2%;
+  margin-top: 6%;
   border: none;
 }
 
@@ -134,43 +124,50 @@
   display: block;
   margin-left: auto;
   padding-right: 5%;
-  margin-top: auto;
+  margin-top: 3%;
   border: none;
 }
     
 .signin {
-  margin-top: 8%; 
+  margin-top: 10%;
+  font-size:12pt;
+  border:none; 
 }
     
 .signup {
   background-color: white;
   border-top: 1px gray solid;
-  width: 105vw;
+  height: 55px;
   margin-left: -5%;
   padding-left: 2%;
 }
 
 .signup2 {
   background-color: white;
-  width: 105vw;
+  height: 55px;
   margin-left: -5%;
   padding-left: 2%;
 }
     
 .signup3 {
   background-color: white;
-  width: 105vw;
   margin-left: -5%;
   padding-left: 2%;
+  border-top:none;
 }
 
 .signup4 {
   background-color: white;
-  width: 105vw;
   margin-left: -5%;
   padding-left: 2%;
 }
-	
+
+.signup5 {
+  background-color: white;
+  margin-left: -5%;
+  padding-left: 2%;
+}
+
 .login3 {
   width: 65%;
   height: 45px;
@@ -190,7 +187,7 @@
 }
 
 .loginbox3 {
-  width: 62%;
+  width: 60%;
   height: 40px;
   margin-left: -12%;
   font-size: 9pt;
@@ -212,12 +209,33 @@
   margin-top: 2%;
 }
 
+#editbutt {
+  font-size: 12pt;
+}
+
+#logoutbut {
+  font-size: 12pt;
+}
+
 .servicesBox {
   height: 30px;
   width: 30%;
   font-size: 11pt;
   margin-left: -3%;
   margin-top: 4.5%;
+}
+
+.appselect {
+  background-color: white;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
+.appselect2 {
+  background-color: white;
+  border-top: 1px gray solid;
+  padding-left: 5%;
+  padding-bottom: 2%;
 }
 
 #Date {
@@ -230,17 +248,18 @@
   color: gray;
 }
 
-.fbLoginBut {
-  width: 70%;
+#fbLoginBut {
+  width: 60%;
   display: block;
   margin: auto;
   background-color: transparent;
   border: none;
   margin-bottom: 2%;
+  margin-left: 22%;
 }
 
 .fblogimg {
-  width: 100%;
+  border:none;
 }
 
 .btn {
@@ -255,12 +274,14 @@
 }
 
 .nav{
-	height:50px;
-	background-color: rgb(200,200,200);
-
+  height:50px;
+  background-color: rgb(200,200,200);
 }
 
 .cal {
+  width: 75%;
+  font-size: 13pt;
+  margin-top: 2%;
   margin: auto;
   display: block;
 }
@@ -273,19 +294,12 @@
   font-size: 8pt;
 }
 
-#fblog {
-  width: 245px;
-  margin: auto;
-  margin-top: 5%;
-  margin-bottom: 3%;
-}
-
 #footerbut {
   height: 75px;
   width: 24%;
   margin-top: 3%;
-  margin-right: 0%;
-  margin-left: 0%;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: -2%;
   padding-bottom: 0%;
   padding-right: 0%;
@@ -300,49 +314,65 @@
   padding: 0%;
 }
 
+.footrowStyle {
+  background-color: #D5CFE1;
+  margin-right: -15%;
+  margin-top: 2%;
+  margin-left: 11%;
+  padding: 0%;
+}
+
 .lightgrey{
-	
-	background-color: rgb(230, 230, 230);
+  background-color: rgb(230, 230, 230);
 }
 
 .poscenter{
-	
-	text-align:center;
+  text-align:center;
 }
 
 .mapheight{
-	
-	height:350px;
-    margin-bottom: 10px;
+  height:350px;
+  margin-bottom: 10px;
 }
 
 .mapcolor{
-
-	background-color:#97FF9D;	
+  background-color:#97FF9D; 
 }
 
 .calheight{
-
-	height:200px;	
-	background-color:#F9D1D2;
+  height:200px; 
+  background-color:#F9D1D2;
 }
 
 .hauto{
   width: 120%;
-	height:auto;
+  height:auto;
   display: block;
   margin-left: -10%;
 }
+
+pre {
+  font-size: 11pt;
+  font-family: sans-serif;
 }
+
+#signerror {
+  color:#C51518;
+    
+}
+  #logerror {
+    color:#C51518;
+  }
+  
+  #success {
+    color:#138110;
+  }
 
 @media (min-width: 700px) {
 
-  .indexlogo {
-  height: 450px;
-  width: 450px;
-  margin-top: 2%;
-  margin-bottom: 1%;
-  margin-left: 16%;
+.indexlogo {
+  height: 250px;
+  width: 250px;
 }
 
  #logo {
@@ -371,6 +401,8 @@
 
 #profilesubhead {
   font-size: 20pt;
+  padding-bottom: 2%;
+  margin-bottom: 5px;
 }
 
 .footrow {
@@ -388,7 +420,6 @@
 .login {
   width: 50%;
   height: 74px;
-  /*background-color: rgb(255, 255, 255);*/
 }
 
 .servicesBox {
@@ -403,6 +434,7 @@
   width: 50%;
   height: 50px;
   font-size: 20pt;
+  margin-top: 1%;
 }
 
 #calendar {
@@ -418,6 +450,10 @@
   margin-left: 1%;
   margin-top: 3%;
   font-size: 18pt;
+}
+
+option {
+  font-size: 8pt;
 }
 
 .login2 {
@@ -447,18 +483,15 @@
 .login4 {
   height: 60px;
   width: 40%;
-  font-size: 20pt;
+  font-size: 16pt;
   margin-left: 6%;
   margin-right: 0%;
-  margin-top: 2%;
 }
 
 .loginbox3 {
   width: 55%;
-  height: 60px;
-  margin-left: 0%;
   margin-top: 4%;
-  font-size: 18pt;
+  font-size: 16pt;
 }
 
 .loginbox4 {
@@ -482,15 +515,13 @@
 .signup {
   background-color: white;
   border-top: 1px gray solid;
-  width: 110vw;
-  margin-left: -4%;
+  height: 110px;
   padding-left: 2%;
 }
 
 .signup2 {
   background-color: white;
-  width: 110vw;
-  margin-left: -4%;
+  height: 110px;
   padding-left: 2%;
 }
 
@@ -502,22 +533,30 @@
 
 .signup4 {
   background-color: white;
-  width: 101vw;
-  margin-left: -4%;
   padding-left: 2%;
 }
 
 .signup3 {
   background-color: white;
   border-top: 1px gray solid;
-  width: 101vw;
-  margin-left: -4%;
   padding-left: 2%;
 }
 
+.signup5 {
+  background-color: white;
+  padding-left: 2%;
+}
+
+#editbutt {
+  font-size: 18pt;
+}
+
+#logoutbut {
+  font-size: 18pt;
+}
+
 .btn {
-  height: 70px;
-  font-size: 22pt;
+  font-size: 18pt;
   margin-bottom: 1%;
 }
 
@@ -528,8 +567,33 @@
 }
 
 pre {
-  font-size: 18pt;
+  font-size: 13pt;
+  font-family: sans-serif;
 }
+
+.appselect {
+  background-color: white;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
+.appselect2 {
+  background-color: white;
+  border-top: 1px gray solid;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
+#signerror {
+  color:#C51518;
+    
+}
+  #logerror {
+    color:#C51518;
+  }
+  #success {
+    color:#138110;
+  }
 
 }
 
@@ -538,7 +602,7 @@ pre {
  #logo {
   height: 250px;
   width: 250px;
-  margin-top: 1%;
+  margin-top: 2%;
 }
 
 #logo3 {
@@ -548,10 +612,10 @@ pre {
 }
 
 .indexlogo {
-  height: 350px;
-  width: 350px;
+  height: 325px;
+  width: 325px;
   margin-top: 1%;
-  margin-left: 33%;
+  margin-bottom: -3%;
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -560,7 +624,6 @@ pre {
 #buttonimg1 {
   width: auto;
   height: 110%;
-
 }
 
 #buttonimg2 {
@@ -593,23 +656,39 @@ pre {
 
 .footrow {
   background-color: #D5CFE1;
-  margin-right: -2%;
-  margin-left: 0%;
-  margin-top: 0%;
+  margin: auto;
+  padding: 0%;
+  display:block;
+}
+
+.footrowStyle {
+  background-color: #D5CFE1;
+  margin-left: 16%;
+  margin-top: -0.5%;
   padding: 0%;
 }
 
-  #profilehead {
+.current {
+  background-color: #B7E4F6;
+}
+
+.current:hover {
+  background-color: #B7E4F6;
+}
+
+#profilehead {
   font-size: 20pt;
   margin-top: 1%;
+  margin-bottom: -1%;
 }
 
 #profilesubhead {
   font-size: 20pt;
-  margin-bottom: 1%;
+  margin-bottom: -1.5%;
+  margin-top: 0.6%;
 }
 
-  .typebut {
+.typebut {
   margin: auto;
   margin-top: 0%;
   margin-bottom: 2%;
@@ -622,8 +701,15 @@ pre {
   font-size: 16pt;
   margin-top: 1%;
   margin-bottom: 1%;
-  margin-left: 5%;
+  margin-left: 8%;
+}
 
+.login3 {
+  width: 65%;
+  height: 45px;
+  margin-left: 1%;
+  margin-top: 2%;
+  font-size: 18pt;
 }
 
 .loginbox {
@@ -649,15 +735,15 @@ pre {
   font-size: 16pt;
   margin-left: 8%;
   margin-right: 0%;
-  margin-top: 2%;
+  margin-top: 1.5%;
 }
 
 .loginbox3 {
   width: 55%;
   height: 60px;
   margin-left: -10%;
-  margin-top: 2%;
-  font-size: 14pt;
+  margin-top: 0%;
+  font-size: 16pt;
 }
 
 .loginbox4 {
@@ -670,22 +756,19 @@ pre {
 .signup {
   background-color: white;
   border-top: 1px gray solid;
-  width: 99.2vw;
-  margin-left: -6%;
+  height: 60px;
   padding-left: 2%;
 }
 
 .signup2 {
   background-color: white;
-  width: 99.2vw;
-  margin-left: -6%;
+  height: 60px;
   padding-left: 2%;
 }
 
 .signup3 {
   background-color: white;
-  width: 99.2vw;
-  margin-left: -6%;
+  border-top: 1px gray solid;
   padding-left: 2%;
 }
 
@@ -698,47 +781,80 @@ pre {
 
 .signup4 {
   background-color: white;
-  width: 101vw;
-  margin-left: -4%;
   padding-left: 2%;
 }
 
-.signup3 {
+.signup5 {
+  background-color: white;
+  padding-left: 2%;
+}
+
+.appselect {
+  background-color: white;
+  padding-left: 5%;
+  padding-bottom: 1%;
+  padding-top: -8%;
+}
+
+.appselect2 {
   background-color: white;
   border-top: 1px gray solid;
-  width: 101vw;
-  margin-left: -4%;
-  padding-left: 2%;
+  padding-left: 5%;
+  padding-bottom: 1%;
+  padding-top: -8%;
+}
+
+.servicesBox {
+  height: 50px;
+  width: 18%;
+  font-size: 20pt;
+  margin-left: 3%;
+  margin-top: 2%;
+}
+
+option {
+  font-size: 15pt;
 }
     
 .logbut {
   margin: auto;
+  clear:both;
   margin-top: 2%;
   font-size: 14pt;
   height: 40px;
-  width: 40%;
+  width: 50%;
   margin-bottom: 4%;
 }
 
-.fbLoginBut {
-  width: 35%;
+#fbLoginBut {
+  width: 33%;
   display: block;
   margin: auto;
   background-color: transparent;
   border: none;
-  margin-bottom: 2%;
 }
 
 .fblogimg {
-  width: 100%;
+  width: 90%;
 }
 
 pre {
-  font-size: 11pt;
+  font-size: 12pt;
+  font-family: sans-serif;
 }
 
+#signerror {
+  color:#C51518;    
 }
-/* the CSS for Customer google maps goes here */
+  #logerror {
+    color:#C51518;
+  }
+  #success {
+    color:#138110;
+  }
+
+}
+/* the CSS for Customer Google Maps */
 .controls {
   margin-top: 10px;
   border: 1px solid transparent;
@@ -750,7 +866,7 @@ pre {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-#pac-input {
+#pacinput {
   background-color: #fff;
   font-family: Roboto;
   font-size: 13px;
@@ -761,10 +877,9 @@ pre {
   height: 40px;
 }
 
-#pac-input:focus {
+#pacinput:focus {
   border-color: #4d90fe;
 }
-
 
 .pac-container {
   font-family: Roboto;
@@ -781,3 +896,4 @@ pre {
   font-size: 13px;
   font-weight: 300;
 }
+
